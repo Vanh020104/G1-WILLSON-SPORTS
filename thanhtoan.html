@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Điền thông tin</title>
+    <style>
+
+       * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+       }
+      .error {
+        color: red;
+        margin-left: 50px;
+      }
+
+
+    
+      body {
+        font-family: sans-serif;
+        max-width: 100%;
+      }
+
+      h1 {
+        text-align: center;
+        font-size: 35px;
+        margin: 80px 0 30px 0;
+      }
+
+
+      .infor__form {
+        border: 1px solid rgb(237, 237, 237);
+        border-radius: 5px;
+        margin-left: 23%;
+        margin-top: 20px;
+        width: 850px;
+        padding: 0 50px;
+      }
+    
+  .infor__form div {
+    margin: 30px 50px 0 0;
+  }
+
+
+
+  .container__list--information {
+    padding: 0 20px;
+    width: 100%;
+    max-width: 100%;
+    height: 55px;
+    font-size: 16px;
+    color: black;
+    margin-left: 20px;
+    border: 1px solid black;
+    border-radius: 3px;
+  }
+
+  .national__zip--code {
+    display: flex;
+  }
+
+
+  .postal-code {
+    max-width: 100%;
+    width: 300px;
+    height: 55px;
+    max-width: 100%;
+    font-size: 16px;
+    padding: 0 20px;
+    border: 1px solid black;
+    border-radius: 3px;
+  }
+
+  .explaination {
+    margin:5px 10px 0 30px;
+    color: #666;
+    font-size: 16px;
+  }
+
+
+.explaination-two{
+  margin: 5px 10px 0 15px;
+  color: #666;
+  font-size: 16px;
+}
+  .selection__choose {
+    width: 100%;
+    max-width: 100%;
+    border: 1px solid black;
+    border-radius: 3px;
+    margin-left: 40px;
+    font-size: 16px;
+    font-weight: 600px;
+    padding: 0 20px;
+    height: 55px;
+  }
+
+  .country select{
+    height: 55px;
+    margin-left: 20px;
+    width: 300px;
+    margin-right: 50px;
+    font-size: 16px;
+    padding: 0 30px;
+    font-weight: 600;
+    border: 1px solid black;
+    border-radius: 3px;
+  }
+
+  .choose select{
+    margin-left: 20px;
+    font-weight: 600;
+  }
+
+  .check_information {
+    height: 50px;
+    width: 250px;
+    border: 1px solid #999;
+    border-radius: 4px;
+    color: white;
+    background-color: black;
+    font-size: 20px;
+    text-align: center;
+    margin: 30px 35%;
+    box-shadow: 2px 2px 2px 2px rgb(203, 197, 197);
+    cursor: pointer;
+  }
+
+  
+.check_information:hover {
+    color: #c4c3c3;
+}
+
+.option-container {
+  padding-left: 20px;
+  font-size: 20px;
+  padding-top: 10px;
+}
+
+.option {
+  width: 780px;
+}
+
+.checkbox {
+  width: 30px;
+  height: 20px;
+}
+
+/* phan cuoi */
+
+.bottom__end {
+    width: 100%;
+    height: 100px;
+    background: #363738;
+    font-family: sans-serif;
+    text-align: center;
+}
+
+.bottom__end--header {
+    display: flex;
+    margin-left: 35%;
+    padding: 20px 0;
+}
+
+
+.border_end {
+    height: 15px;
+    border: 0.1px solid rgb(212, 209, 209);
+    background: #999;
+    margin: 0 20px;
+}
+
+.bottom__end--note {
+    color: #999;
+}
+
+.bottom__end--items {
+    text-decoration: none;
+    color: white;
+}
+
+
+/* PHAN HIEN DISPLAY */
+
+h2 {
+  color: black;
+  padding-left: 220px;
+}
+
+li {
+  list-style-type: none;
+  margin-left: 310px;
+  font-size: 18px;
+  margin: 20px 0;
+}
+
+ul {
+  margin-left: 280px;
+}   
+
+.vanh__link {
+  border: 1px solid black;
+    background-color: black;
+    color: #fff;
+    font-size: 20px;
+    box-shadow: 2px 2px 2px 2px rgb(203, 197, 197);
+    max-width: 100%;
+    height: 50px;
+    width: 350px;
+    margin-left: 230px;
+    border-radius: 3px;
+    margin-bottom: 30px;
+    cursor: pointer;
+    margin-top: 30px;
+}
+.link-trang {
+    text-decoration: none;
+    color: white;
+    width: 340px;
+    height: 48px;
+    border-radius: 3px;
+    padding: 5px 50px;
+}
+
+hr {
+  margin: 10px 50px;
+}
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      
+      <div class="infor__form">
+        <h1>INFORMATION AND ADDRESS</h1>
+        <form id="info-form">
+          <div>
+            <!-- <label for="name">Name:</label> -->
+            <input class="container__list--information" type="text" id="name" name="name" placeholder="Name *">
+            <p class="explaination">Please fill in your full name...</p>
+            <span class="error" id="name-error"></span>
+          </div>
+          <div>
+            <!-- <label for="address-number">Số nhà:</label> -->
+            <input class="container__list--information" type="text" id="address-number" name="address-number" placeholder=" House Number/ Street Name *">
+            <p class="explaination">Example: 33 Le Duan...</p>
+            <span class="error" id="address-number-error"></span>
+          </div>
+          <div>
+            <!-- <label for="address">Địa chỉ:</label> -->
+            <input class="container__list--information" type="text" id="address" name="address" placeholder="Address/ Builing Name *">
+            <p class="explaination">Example: German Building; Building X1 - XYZ Apartment,...</p>
+            <span class="error" id="address-error"></span>
+          </div>
+          <div>
+            <!-- <label for="email">Email:</label> -->
+            <input class="container__list--information" type="email" id="email" name="email" placeholder="Your Email *">
+            <p class="explaination">Example: g1sports@gmail.com,...</p>
+            <span class="error" id="email-error"></span>
+          </div>
+          <div>
+            <!-- <label for="phone">Số điện thoại:</label> -->
+            <input class="container__list--information" type="tel" id="phone" name="phone" placeholder="Phone Number *">
+            <span class="error" id="phone-error"></span>
+          </div>
+
+          <div class="national__zip--code">
+
+            <div class="country">
+              <!-- <label for="country">Đất nước:</label> -->
+              <select id="country" name="country" >
+                <option value=""><strong> - - National - -</strong></option>
+                <option value="VIET NAM">Viet Nam</option>
+                <option value="English">English</option>
+                <option value="Japan">Japan</option>
+                <option value="France">France</option>
+                <option value="Singapore">Singapore</option>
+                <option value="China">China</option>
+              </select>
+              <p class="explaination">Example: Viet Nam, English,...</p>
+              <span class="error" id="country-error"></span>
+            </div>
+            <div>
+              <!-- <label for="postal-code">Mã bưu chính:</label> -->
+              <input class="postal-code" type="text" id="postal-code" name="postal-code" placeholder="Zip Code *">
+              <p class="explaination-two">Example: 70000...</p>
+              <span class="error" id="postal-code-error"></span>
+            </div>
+
+            
+          </div>
+          <div class="choose">
+            <select class="selection__choose" name="individual" id="individual-select">
+                <option value="individual"><strong>Individual</strong></option>
+                <option value="company">Company</option>
+            </select>
+            <p class="explaination">If you request a tax invoice, please ensure that the information you provide (Full Name, Billing Address and
+                 Tax ID) is correct and true. The issued tax invoice cannot be changed under any circumstances.</p>
+        </div>
+
+        <div class="input__list">
+          <div class="option-container">
+              <div class="option">
+                  <input  type="checkbox" class="checkbox" name="payment">
+                  <label class="option__imformation" for="">My payment/tax invoice and my shipping information are the same.</label>
+              </div>
+              <div class="option">
+                  <input type="checkbox" class="checkbox" id="Yes, I am over 16 years old" name="payment">
+                  <label class="option__imformation" for="">Yes, I am over 16 years old.</label>
+              </div>
+              <div class="option">
+                  <input type="checkbox" class="checkbox" id="I hereby consent to the transfer, sharing, use, collection and disclosure of my personal information to third parties as set forth in G1-Sport's Privacy Policy" name="payment">
+                  <label class="option__imformation" for="">I hereby consent to the transfer, sharing, use, collection and disclosure of my personal information to third parties as set forth in G1-Sport's Privacy Policy.</label>
+              </div>
+              <div class="option">
+                  <input type="checkbox" class="checkbox" id="I have read, understand and accept the Privacy Policy and the Terms and Conditions." name="payment">
+                  <label class="option__imformation" for="">I have read, understand and accept the Privacy Policy and the Terms and Conditions.</label>
+              </div>
+          </div>
+  </div>
+
+          <button type="submit" class="check_information">Check Information</button>
+          <!-- <hr> -->
+
+           <!-- phan display -->
+      <div id="info-display"></div>
+
+
+        </form>
+      </div>
+
+     
+
+    </div>
+
+    <!-- phan cuoi -->
+
+    <div class="bottom__end">
+      <div class="bottom__end--header">
+          <a class="bottom__end--items" href=""><span>Privacy Policy</span></a>
+          <div class="border_end"></div>
+          <a class="bottom__end--items" href=""><span>Terms and conditions</span></a>
+          <div class="border_end"></div>
+          <a class="bottom__end--items" href=""><span>Company information</span></a>
+      </div>
+      <p class="bottom__end--note">© 2023 adidas Vietnam Company Limited</p>
+  </div>
+  </body>
+    <script>
+		const infoForm = document.getElementById('info-form');
+const infoDisplay = document.getElementById('info-display');
+
+infoForm.addEventListener('submit', (event) => {
+  event.preventDefault();
+
+  const name = document.getElementById('name').value.trim();
+  const addressNumber = document.getElementById('address-number').value.trim();
+  const address = document.getElementById('address').value.trim();
+  const email = document.getElementById('email').value.trim();
+  const phone = document.getElementById('phone').value.trim();
+  const country = document.getElementById('country').value;
+  const postalCode = document.getElementById('postal-code').value.trim();
+
+  let isValid = true;
+
+  if (!name) {
+    document.getElementById('name-error').textContent = 'Please enter your name...';
+    isValid = false;
+  } else {
+    document.getElementById('name-error').textContent = '';
+  }
+
+  if (!addressNumber) {
+    document.getElementById('address-number-error').textContent = 'Please enter house number...';
+    isValid = false;
+  } else {
+    document.getElementById('address-number-error').textContent = '';
+  }
+
+  if (!address) {
+    document.getElementById('address-error').textContent = 'Please enter your address...';
+    isValid = false;
+  } else {
+    document.getElementById('address-error').textContent = '';
+  }
+
+  if (!email) {
+    document.getElementById('email-error').textContent = 'Please enter your email...';
+    isValid = false;
+  } else {
+    document.getElementById('email-error').textContent = '';
+  }
+
+  if (!phone) {
+    document.getElementById('phone-error').textContent = 'Please enter the phone number...';
+    isValid = false;
+  } else {
+    document.getElementById('phone-error').textContent = '';
+  }
+
+  if (!country) {
+    document.getElementById('country-error').textContent = 'Please select country...';
+    isValid = false;
+  } else {
+    document.getElementById('country-error').textContent = '';
+  }
+
+  if (!postalCode) {
+    document.getElementById('postal-code-error').textContent = 'Please enter your postal code...';
+    isValid = false;
+  } else {
+    document.getElementById('postal-code-error').textContent = '';
+  }
+
+  if (isValid) {
+    infoDisplay.innerHTML = `
+      <hr>
+      <h2>INFORMATION JUST ENTERED</h2>
+      <ul>
+        <li><strong>Name: </strong> ${name}</li>
+        <li><strong>House Number/ Street Name: </strong> ${addressNumber}</li>
+        <li><strong>Builing Name/ Address: </strong> ${address}</li>
+        <li><strong>Email: </strong> ${email}</li>
+        <li><strong>Phone Number: </strong> ${phone}</li>
+        <li><strong>National: </strong> ${country}</li>
+        <li><strong>Postal Code: </strong> ${postalCode}</li>
+      </ul>
+      <button class="vanh__link"><a class="link-trang" href="endthanhtoan.html?name=${encodeURIComponent(name)}
+        &addressNumber=${encodeURIComponent(addressNumber)}
+        &address=${encodeURIComponent(address)}
+        &email=${encodeURIComponent(email)}
+        &phone=${encodeURIComponent(phone)}
+        &country=${encodeURIComponent(country)}
+        &postalCode=${encodeURIComponent(postalCode)}">Review & Checkout</a></button>
+    `;
+  }
+});
+
+	</script>
+</html>
