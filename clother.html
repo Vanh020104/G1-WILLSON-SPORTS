@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" 
+    integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="clother.css">
+    <title>G1-WILSON-SPORTING-GOODS</title>
+</head>
+
+
+    <script>
+		function searchProducts() {
+			// Lấy giá trị từ ô input
+			var searchQuery = document.getElementById("searchInput").value;
+
+			// Kiểm tra xem có kết quả tìm kiếm hay không
+			if (searchQuery == "") {
+				alert("Please Enter Search Keyword");
+				return;
+			}
+
+			// Chuyển đổi thành chữ thường để so sánh dễ dàng hơn
+			searchQuery = searchQuery.toLowerCase();
+
+			// Lặp qua các sản phẩm để tìm kiếm sản phẩm phù hợp
+			var products = document.getElementsByClassName("js-search-products");
+			var foundProducts = [];
+			for (var i = 0; i < products.length; i++) {
+				var productName = products[i].getElementsByClassName("products-item")[0].innerText.toLowerCase();
+				if (productName.includes(searchQuery)) {
+					foundProducts.push(products[i]);
+				}
+			}
+
+			// Hiển thị các sản phẩm phù hợp
+			if (foundProducts.length > 0) {
+				for (var i = 0; i < products.length; i++) {
+					products[i].style.display = "none";
+				}
+				for (var i = 0; i < foundProducts.length; i++) {
+					foundProducts[i].style.display = "block";
+				}
+			} else {
+				alert("No Matching Products Found");
+			}
+		}
+	</script>
+<body>
+    <div class="app">
+        <div class="container">
+            <img class="container__top" src="https://cdn.khungthanh.com/files/tv/tennishd.png" alt="">
+            <!-- <span class="container__top">G1-SPORT</span> -->
+            <i class="fa-solid fa-magnifying-glass icon__search"></i>
+            <input class="container__search" type="text" id="searchInput" placeholder="Search a products..."> 
+            <button class="button-search" onclick="searchProducts()">Search</button>
+            <div class="container__all">
+                <button class="container__login js-buy-ticket-one" >SIGN IN</button>
+                <i class="fa-solid fa-right-to-bracket login__icon"></i>
+            </div>
+            <div class="header__cart">
+                <a href=""> <i class="fa-brands fa-opencart icon__cart"></i></a> 
+    
+            </div>
+        </div>
+        <div class="app__importer">
+            <a class="imformation" href="http://127.0.0.1:5500/adidas.html">HOME</a>
+            <a class="imformation" href="http://127.0.0.1:5500/clother.html">CLOTHER</a>
+            <a class="imformation" href="http://127.0.0.1:5500/shoe2.html">SHOE</a>
+            <a class="imformation" href="http://127.0.0.1:5500/accessory.html">ACCESSORY</a>
+            <a class="imformation" href="http://127.0.0.1:5500/bag.html">BAG</a>
+        </div>
+    </div>
+    <div class="app__hearder">
+    </div>
+    
+      <!-- đăng nhập -->    
+      <div class="font__sign--in">
+        <form class="modal" action="" id="form">
+            <div class="close">
+                <button class="exit">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+            <div class="title">SIGN IN</div>
+            <!-- User Name input -->
+            <div>
+                <label for="username">User Name</label>
+                <i class="fas fa-user"></i>
+                <input type="text" name="username" id="username" placeholder="James bond">
+                <i class="fas fa-exclamation-circle failure-icon"></i>
+                <i class="fas fa-check-circle success-icon"></i>
+                <div class="error"></div>
+            </div>
+            <!-- Email input -->
+            <div>
+                <label for="email">Email</label>
+                <i class="fas fa-envelope"></i>
+                <input type="email" name="email" id="email" placeholder="bond@gmail.com">
+                <i class="fas fa-exclamation-circle failure-icon"></i>
+                <i class="fas fa-check-circle success-icon"></i>
+                <div class="error"></div>
+            </div>
+            <!-- Password input -->
+            <div>
+                <label for="password">Password</label>
+                <i class="fas fa-lock"></i>
+                <input type="password" name="password" id="password" placeholder="Password here"  >
+                <i class="fas fa-exclamation-circle failure-icon"></i>
+                <i class="fas fa-check-circle success-icon"></i>
+                <div class="error"></div>
+            </div>
+    
+    
+            <!-- quan trong -->
+            <div class="submit__bottom">
+              <button id="submit" class="vanh-submit">Submit</button>
+            </div>
+           
+        
+            <div class="border__or-all">
+            <div class="border__or"></div>
+            <span class="write_center">OR</span>
+            <div class="border__or"></div>
+        </div>
+        <!-- facebook -->
+        <a class="button__facebook-items" href="https://vi-vn.facebook.com/">
+            <h3 class="button__facebook">
+                <i class="fa-brands fa-square-facebook icon__facebook"></i>
+                <span class="button__facebook-logo">FACEBOOK</span>
+            </h3>
+        </a>
+       <!-- google -->
+        <a class="button__facebook-items" href="https://accounts.google.com/v3/signin/identifier?dsh=S-636911065%3A1676126060267059&continue=https%3A%2F%2Fwww.google.com.vn%2F%3Fhl%3Dvi&ec=GAZAmgQ&hl=vi&passive=true&flowName=GlifWebSignIn&flowEntry=ServiceLogin&ifkv=AWnogHeIS_CQ3C0odY0fjnmmTDfJpIj5FTNdOvZxSI5FtkxxYbAwAvouRyVuqJauH0W5M8Lu5tRJdA">
+            <h3 class="button__facebook">
+               <img class="icon__google" src="data:image/png;base64,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" alt="">
+                <span class="button__google-logo">GOOGLE</span>
+            </h3>
+        </a>
+        </form>
+        </div>                             
+       
+
+                          
+             <!-- code phần phụ kiện  -->
+<div id="wrapper">
+    <div class="headline">
+        <h3 class="khung-item">CLOTHER</h3>
+    </div>
+    <ul class="products">
+        <!-- 1 -->
+        <li class="js-search-products">
+            <div class="products-item">
+                <div class="product-top">
+                    <a href="http://127.0.0.1:5500/quanao02.html" class="product-thumb">
+                        <img class="product" src="https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/0d6643051d09418cb9faae8801463fea_9366/adidas_Adventure_Winter_Crewneck_Sweatshirt_White_HK5017_21_model.jpg" alt="">
+                    </a>
+                    <a href="http://127.0.0.1:5500/quanao02.html" class="buy-now">Buy Now</a>
+                    <!--mua ngay-->
+                </div>
+                <div class="product-info">
+                    <a href="http://127.0.0.1:5500/quanao02.html" class="product-cat">Adidas</a>
+                    <!--chỉnh sửa lại tên-->
+                    <a href="http://127.0.0.1:5500/quanao02.html" class="product-name">ADIDAS ADVENTURE WINTER CREWNECK SWEATSHIRT</a>
+                    <!--sửa lại giá-->
+                    <div class="product-price">52.32$</div>
+                </div>
+            </div>
+        </li> 
+        <!--2-->
+        <li class="js-search-products">
+            <div class="products-item">
+                <div class="product-top">
+                    <a href="" class="product-thumb">
+                        <img class="product" src="https://assets.adidas.com/images/w_383,h_383,f_auto,q_auto,fl_lossy,c_fill,g_auto/591c99d3ba6745358960af4600cae42c_9366/b%E1%BB%99-track-suit-3-s%E1%BB%8Dc.jpg" alt="">
+                    </a>
+                    <a href="" class="buy-now">Buy Now</a>
+                    <!--mua ngay-->
+                </div>
+                <div class="product-info">
+                    <a href="" class="product-cat">Adidas</a>
+                    <!--chỉnh sửa lại tên-->
+                    <a href="" class="product-name">Adidas Round Neck Sweatshirt</a>
+                    <!--sửa lại giá-->  
+                    <div class="product-price">99,00$</div>
+                </div>
+            </div>
+        </li>
+        <!--3-->
+        <li class="js-search-products">
+            <div class="products-item">
+                <div class="product-top">
+                    <a href="" class="product-thumb">
+                        <img class="product" src="https://assets.adidas.com/images/w_276,h_276,f_auto,q_auto,fl_lossy,c_fill,g_auto/e3c1242269074a92b6b6af4e0022f5cd_9366/IB8623_21_model.jpg" alt="">
+                    </a>
+                    <a href="" class="buy-now">Buy Now</a>
+                    <!--mua ngay-->
+                </div>
+                <div class="product-info">
+                    <a href="" class="product-cat">Adidas</a>
+                    <!--chỉnh sửa lại tên-->
+                    <a href="" class="product-name">Adidas Children's Windbreaker</a>
+                    <!--sửa lại giá-->
+                    <div class="product-price">105,00$</div>
+                </div>
+            </div>
+        </li>
+        <!--4-->
+        <li class="js-search-products">
+            <div class="products-item">
+                <div class="product-top">
+                    <a href="" class="product-thumb">
+                        <img class="product" src="https://assets.adidas.com/images/w_383,h_383,f_auto,q_auto,fl_lossy,c_fill,g_auto/44f307df90fe4801bca9af5b00998754_9366/%C3%A1o-thun-ch%E1%BA%A1y-b%E1%BB%99-fast.jpg" alt="">
+                    </a>
+                    <a href="" class="buy-now">Buy Now</a>
+                    <!--mua ngay-->
+                </div>
+                <div class="product-info">
+                    <a href="" class="product-cat">Adidas</a>
+                    <!--chỉnh sửa lại tên-->
+                    <a href="" class="product-name">Adidas Running T-Shirt</a>
+                    <!--sửa lại giá-->
+                    <div class="product-price">59,00$</div>
+                </div>
+            </div>
+        </li>
+        <!--5-->
+        <li class="js-search-products">
+            <div class="products-item">
+                <div class="product-top">
+                    <a href="" class="product-thumb">
+                        <img class="product" src="https://assets.adidas.com/images/w_383,h_383,f_auto,q_auto,fl_lossy,c_fill,g_auto/55fe002984784a9ba646aefc00f3d411_9366/qu%E1%BA%A7n-t%E1%BA%ADp-luy%E1%BB%87n-tiro-23-league.jpg" alt="">
+                    </a>
+                    <a href="" class="buy-now">Buy Now</a>
+                    <!--mua ngay-->
+                </div>
+                <div class="product-info">
+                    <a href="" class="product-cat">Adidas</a>
+                    <!--chỉnh sửa lại tên-->
+                    <a href="" class="product-name">Adidas Tiro 23 League Training Pants</a>
+                    <!--sửa lại giá-->
+                    <div class="product-price">99,00$</div>
+                </div>
+            </div>
+        </li>
+        <!--6-->
+        <li class="js-search-products">
+            <div class="products-item">
+                <div class="product-top">
+                    <a href="" class="product-thumb">
+                        <img class="product" src="https://assets.adidas.com/images/w_383,h_383,f_auto,q_auto,fl_lossy,c_fill,g_auto/6b587469d5294046b505aca700e36bfe_9366/%C3%A1o-gi%C3%B3-adicolor.jpg" alt="">
+                    </a>
+                    <a href="" class="buy-now">Buy Now</a>
+                    <!--mua ngay-->
+                </div>
+                <div class="product-info">
+                    <a href="" class="product-cat">Adidas</a>
+                    <!--chỉnh sửa lại tên-->
+                    <a href="" class="product-name">Adidas Autumn And Winter Shirt</a>
+                    <!--sửa lại giá-->
+                    <div class="product-price">110,00$</div>
+                </div>
+            </div>
+        </li>
+        <!--7-->
+        <li class="js-search-products">
+            <div class="products-item">
+                <div class="product-top">
+                    <a href="" class="product-thumb">
+                        <img class="product" src="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcT_WTmq2LVxxH1wfItvFVXRqD8eYLVg6LYKPoLUIMOzslPeah2kK2WDSy3E1hrfMcRO7pIdk4EgnFoC-2ehnA-myfO7ZykDX6Cxrx-FUNKS7RxgKk7dfCpezg&usqp=CAE" alt="">
+                    </a>
+                    <a href="" class="buy-now">Buy Now</a>
+                    <!--mua ngay-->
+                </div>
+                <div class="product-info">
+                    <a href="" class="product-cat">Adidas</a>
+                    <!--chỉnh sửa lại tên-->
+                    <a href="" class="product-name">Adidas Sportswear Hoodie Originals</a>
+                    <!--sửa lại giá-->
+                    <div class="product-price">205,00$</div>
+                </div>
+            </div>
+        </li>
+        <!--8-->
+        <li class="js-search-products">
+            <div class="products-item">
+                <div class="product-top">
+                    <a href="" class="product-thumb">
+                        <img class="product" src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcTU0bijwQMbaidixis6CpvG1FnETUqHtRbf_DLBiijyN6H330FPZh9_IYM086Cc27Duj-9UBEzsPtvquqpp4oNc4MQe47GcvbnJgNKGf-JaBQN8tQKjVJ6Y&usqp=CAE" alt="">
+                    </a>
+                    <a href="" class="buy-now">Buy Now</a>
+                    <!--mua ngay-->
+                </div>
+                <div class="product-info">
+                    <a href="" class="product-cat">Adidas</a>
+                    <!--chỉnh sửa lại tên-->
+                    <a href="" class="product-name">Adidas Thermal Jacket</a>
+                    <!--sửa lại giá-->
+                    <div class="product-price">49.6$</div>
+                </div>
+            </div>
+        </li>
+        <!--9-->
+        <li class="js-search-products">
+            <div class="products-item">
+                <div class="product-top">
+                    <a href="" class="product-thumb">
+                        <img class="product" src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcS6LhhA8HldEqxYaJPoSOQyHpchr4P3UUS21zQywzyfqgBLbkBon2xJxnn7mO7PLz0n6_UX_uCbYW7Koeu3wo5k9uYm0ljzPufwEVUm0mtk_HR1OacB6g3s&usqp=CAE" alt="">
+                         <a href="" class="buy-now">Buy Now</a>
+                    <!--mua ngay-->
+                </div>
+                <div class="product-info">
+                    <a href="" class="product-cat">Adidas</a>
+                    <!--chỉnh sửa lại tên-->
+                    <a href="" class="product-name">Adidas Wind Jacket</a>
+                    <!--sửa lại giá-->
+                    <div class="product-price">120,00$</div>
+                </div>
+            </div>
+        </li>
+        <!--10-->
+        <li class="js-search-products">
+            <div class="products-item">
+                <div class="product-top">
+                    <a href="" class="product-thumb">
+                        <img class="product" src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcTGin4-_eApliyIBB6OhPEA0kDGgQ89f8aZB1EZjqhntH_ThUj9vktXyBEqZryz_23KZs1Rd91OcZkTEYVDWnU6o5Mugl7mvfB6YH7d_7Zv0l27fQck6VwQtQ&usqp=CAE" alt="">
+                    </a>
+                    <a href="" class="buy-now">Buy Now</a>
+                    <!--mua ngay-->
+                </div>
+                <div class="product-info">
+                    <a href="" class="product-cat">Adidas</a>
+                    <!--chỉnh sửa lại tên-->
+                    <a href="" class="product-name">Adidas Golf Shirt</a>
+                    <!--sửa lại giá-->
+                    <div class="product-price">58,30$</div>
+                </div>
+            </div>
+        </li>
+        <!--11-->
+        <li class="js-search-products">
+            <div class="products-item">
+                <div class="product-top">
+                    <a href="" class="product-thumb">
+                        <img class="product" src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcRJfOppo_1LA3Nj3sTEEJ3At50dzLx-UpmzXCv_8Obfh-ywIFL6cAIGy8yXJY1f9sG3lQoR2lg4gCYfHfMpe4FW-I28Mtwosscivv_2uQqG1LtvQTD3__Bl&usqp=CAE" alt="">
+                    </a>
+                    <a href="" class="buy-now">Buy Now</a>
+                    <!--mua ngay-->
+                </div>
+                <div class="product-info">
+                    <a href="" class="product-cat">Adidas</a>
+                    <!--chỉnh sửa lại tên-->
+                    <a href="" class="product-name">Adidas Tapered Pants</a>
+                    <!--sửa lại giá-->
+                    <div class="product-price">50,20$</div>
+                </div>
+            </div>
+        </li>
+        <!--12-->
+        <li class="js-search-products">
+            <div class="products-item">
+                <div class="product-top">
+                    <a href="" class="product-thumb">
+                        <img class="product" src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcSv7SQXL-S7esZPjyPxbcJEO8I7iHPM_aC9roIS4dP7YMGowwv6kF1DMl5nU9denJc2Mo4S51SC2q8WL0TqDzp34oaT7_9NgFYakZmOK2LWA4s9J43ecgip&usqp=CAE" alt="">
+                    </a>
+                    <a href="" class="buy-now">Buy Now</a>
+                    <!--mua ngay-->
+                </div>
+                <div class="product-info">
+                    <a href="" class="product-cat">Adidas</a>
+                    <!--chỉnh sửa lại tên-->
+                    <a href="" class="product-name">Adidas Unisex Jacket</a>
+                    <!--sửa lại giá-->
+                    <div class="product-price">85,30$</div>
+                </div>
+            </div>
+        </li>
+        <!--13-->
+        <li class="js-search-products">
+            <div class="products-item">
+                <div class="product-top">
+                    <a href="" class="product-thumb">
+                        <img class="product" src="https://assets.adidas.com/images/w_383,h_383,f_auto,q_auto,fl_lossy,c_fill,g_auto/324683bdc7474d01b367af25014b625c_9366/%C3%A1o-polo-core-aeroready.jpg" alt="">
+                    </a>
+                    <a href="" class="buy-now">Buy Now</a>
+                    <!--mua ngay-->
+                </div>
+                <div class="product-info">
+                    <a href="" class="product-cat">Adidas</a>
+                    <!--chỉnh sửa lại tên-->
+                    <a href="" class="product-name">Adidas Polo Shirt</a>
+                    <!--sửa lại giá-->
+                    <div class="product-price">45.3$</div>
+                </div>
+            </div>
+        </li>
+        <!--14-->
+        <li class="js-search-products">
+            <div class="products-item">
+                <div class="product-top">
+                    <a href="" class="product-thumb">
+                        <img class="product" src="https://assets.adidas.com/images/w_383,h_383,f_auto,q_auto,fl_lossy,c_fill,g_auto/c24507ba685a4186bb3faf0f00cca82d_9366/qu%E1%BA%A7n-short-t%E1%BA%ADp-luy%E1%BB%87n-3-s%E1%BB%8Dc-train-icons.jpg" alt="">
+                    </a>
+                    <a href="" class="buy-now">Buy Now</a>
+                    <!--mua ngay-->
+                </div>
+                <div class="product-info">
+                    <a href="" class="product-cat">Adidas</a>
+                    <!--chỉnh sửa lại tên-->
+                    <a href="" class="product-name">Adidas Training Shorts</a>
+                    <!--sửa lại giá-->
+                    <div class="product-price">56.9$</div>
+                </div>
+            </div>
+        </li>
+        <!--15-->
+        <li class="js-search-products">
+            <div class="products-item">
+                <div class="product-top">
+                    <a href="" class="product-thumb">
+                        <img class="product" src="https://assets.adidas.com/images/w_383,h_383,f_auto,q_auto,fl_lossy,c_fill,g_auto/25e4b62acd4445b4b5bdaf460127ac63_9366/%C3%A1o-polo-tennis-freelift.jpg" alt="">
+                    </a>
+                    <a href="" class="buy-now">Buy Now</a>
+                    <!--mua ngay-->
+                </div>
+                <div class="product-info">
+                    <a href="" class="product-cat">Adidas</a>
+                    <!--chỉnh sửa lại tên-->
+                    <a href="" class="product-name">Adidas Tennis Polo Shirt</a>
+                    <!--sửa lại giá-->
+                    <div class="product-price">10.58$</div>
+                </div>
+            </div>
+        </li>
+        <!--16-->
+        <li class="js-search-products">
+            <div class="products-item">
+                <div class="product-top">
+                    <a href="" class="product-thumb">
+                        <img class="product" src="https://assets.adidas.com/images/w_383,h_383,f_auto,q_auto,fl_lossy,c_fill,g_auto/08bf463c1b234570ae90af430145fceb_9366/%C3%A1o-hoodie-dame-pg.jpg" alt="">
+                    </a>
+                    <a href="" class="buy-now">Buy Now</a>
+                    <!--mua ngay-->
+                </div>
+                <div class="product-info">
+                    <a href="" class="product-cat">Adidas</a>
+                    <!--chỉnh sửa lại tên-->
+                    <a href="" class="product-name">Hoodie Adidas</a>
+                    <!--sửa lại giá-->
+                    <div class="product-price">53.53$</div>
+                </div>
+            </div>
+        </li>
+    </ul>
+</div>
+
+<!-- phan tiep theo next -->
+
+<div class="next">
+    <button class="next__body">Next...</button>
+</div>
+
+<!-- phan cuoi end -->
+
+<div class="bottom__end">
+    <div class="vanh__bottom-them">
+        <div class="vanh__bottom-them-product-one">
+                <span class="vanh__bottom-them-product">
+                    PRODUCTS
+                </span>
+                    <ul>
+                        <li><a href="http://127.0.0.1:5500/shoe2.html">- Shoes Men</a></li>
+                        <li><a href="http://127.0.0.1:5500/bag.html">- Bag Adidas</a></li>
+                        <li><a href="http://127.0.0.1:5500/clother.html">- Clothes Men fashion</a></li>
+                        <li><a href="http://127.0.0.1:5500/shoe2.html">- Cap/Hat Adidas</a></li>
+                        <li><a href="http://127.0.0.1:5500/accessory.html">- Accessory Sports</a></li>
+                        <li>- Products New</li>
+                        <li>- Products Hot</li>
+                        <li>- All Products</li>
+                    </ul>
+        </div>
+
+        <div class="vanh__bottom-them-product-one">
+            <span class="vanh__bottom-them-product">
+                FOLLOW US
+            </span>
+              <ul class="vanh-icon">
+                <li><img class="vanh-icon-one" src="https://dongphucphuongthao.vn/wp-content/uploads/2022/06/fb.png"></li>
+                <li><img class="vanh-icon-two" src="https://dongphucphuongthao.vn/wp-content/uploads/2022/06/g.png"></li>
+                <li><img class="vanh-icon-three" src="https://dongphucphuongthao.vn/wp-content/uploads/2022/06/insta.png" ></li>
+                <li><img class="vanh-icon-four" src="https://dongphucphuongthao.vn/wp-content/uploads/2022/06/yt.png"></li>
+                <li><img class="vanh-icon-five" src="https://dongphucphuongthao.vn/wp-content/uploads/2022/06/p.png"></li>
+                <li><img class="vanh-icon-six" src="https://dongphucphuongthao.vn/wp-content/uploads/2022/06/tiktok.png"></li>
+              </ul>  <br><br>
+              <div class="bottom__end--logo">
+                <a href="" class="bottom__end--logo-hearder">
+                    <img class="bottom__end--logo-hearder-img" src="https://s3.amazonaws.com/cdn.freshdesk.com/data/helpdesk/attachments/production/42008041469/original/Mo9gDy2XMZLppkUw4sWCsYV-lk65HqqgQw.gif?1539077990" alt="">
+                </a>
+                <img class="bottom__end--logo-hearder-group1" src="https://cdn.khungthanh.com/files/tv/tennishd.png" alt="">
+            </div>
+        </div>
+
+        <div class="vanh__bottom-them-product-one">
+            <span class="vanh__bottom-them-product">
+                SUPPORT
+            </span>
+                <ul>
+                    <li>- Customer Service Help</li>                
+                    <li>- Store search engine</li>
+                    <li>- Size Chart</li>
+                    <li>- Pay</li>
+                    <li>- Delivery</li>
+                    <li>- Returns & Refunds</li>
+                    <li>- Promotion</li>
+                    <li>- Sitemap</li>
+                </ul>
+        </div>
+
+        
+    </div>
+
+
+    <div class="vanh_bottom-end">
+        <div class="bottom__end-items">
+           <a class="bottom__end-items--notification" href="">PRIVACY POLICY</a>
+           <div class="bottom__end-items--border"></div>
+           <a class="bottom__end-items--notification" href="">OPERATION REGULATIONS</a>
+           <div class="bottom__end-items--border"></div>
+           <a class="bottom__end-items--notification" href="">SHIPPING POLICY</a>
+           <div class="bottom__end-items--border"></div>
+           <a class="bottom__end-items--notification" href="">REFUND AND REFUND POLICY</a>
+        </div>
+        
+        <div class="bottom__end--address">
+            Address: No. 8A, Ton That Thuyet Street, My Dinh 2 Ward, Cau Giay District, Hanoi City, Vietnam. Support call center: 19001221 - Email: group1sport@gmail.com
+            Responsible for Content Management: Group1 Sport - Contact phone: 024 6783210 (ext 4678)
+            Enterprise code: 0106773786 first issued by Hanoi Department of Planning and Investment on October 20, 2015
+            © 2015 - Copyright belongs to G1 Sport Co., Ltd.
+        </div>
+
+    </div>
+</div>
+
+                                            
+</body>
+    
+<script>
+    // javascript Sign in
+    const buySigns = document.querySelectorAll('.js-buy-ticket-one')
+    const signin = document.querySelector('.font__sign--in')
+    const modalClose = document.querySelector('.close')
+
+
+    function fllowingBuyTickets() {
+        signin.classList.add('open')
+    }
+
+    function exitBuyTickets() {
+        signin.classList.remove('open')
+    }
+
+    for(const buySign of buySigns) {
+        buySign.addEventListener('click', fllowingBuyTickets)
+    } 
+    
+    modalClose.addEventListener('click', exitBuyTickets)
+</script>
+
+<!-- check sign in  -->
+<script>
+let id = (id) => document.getElementById(id);
+let classes =(classes) =>document.getElementsByClassName(classes);
+
+let username = id("username"),
+password = id("password"),
+email = id("email"),
+errorMsg = classes("error"),
+successIcon=classes("success-icon"),
+failureIcon = classes("failure-icon");
+form.addEventListener("submit",(e) =>{
+e.preventDefault(); //callback() trong js
+engine(username,0,"Username cannot be blank!");
+engine(email,1,"Email cannot be blank!");
+engine(password,2,"Password cannot be blank!");
+});
+
+let engine = (id,serial,message) =>{
+if(id.value.trim()===""){
+    errorMsg[serial].innerHTML = message;
+    id.style.border ="2px solid red";
+    failureIcon[serial].style.opacity="1";
+    successIcon[serial].style.opacity="0";
+}else{
+    errorMsg[serial].innerHTML = "";
+    id.style.border ="2px solid green";
+    failureIcon[serial].style.opacity="0";
+    successIcon[serial].style.opacity="1";
+}
+};
+</script>
+</html>
+
