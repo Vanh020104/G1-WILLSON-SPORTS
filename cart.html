@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+
+    body {
+        font-family: sans-serif;
+        max-width: 100%;
+    }
+
+    h2{
+        text-align: center;
+        font-size: 30px;
+        padding: 30px 0 50px 0;
+        max-width: 100%;
+    }
+    
+    h3 {
+        margin: 0 20px;
+        max-width: 100%;
+    }
+    .cart {
+        display: flex;
+        font-family: sans-serif;
+        max-width: 100%;
+    }
+
+    .cart__imformation {
+        margin-left: 50px;
+    }
+
+    .cart__imformation span {
+        margin: 0 60px;
+        font-weight: 600;
+    }
+    .product {
+        display: flex;
+        margin: 50px 0;
+        max-width: 100%;
+    }
+
+    .vanh__product-img {
+        width: 150px;
+        margin: 0 50px;
+        max-width: 100%;
+    }
+
+    .vanh__border {
+        border:  1px solid #e1e1e1;
+        width: 1px;
+        /* height: 500px; */
+        max-width: 100%;
+        padding-bottom: 50px;
+        margin-bottom: 50px;
+    }
+
+    .product-details {
+        display: flex;
+        margin-top: 40px;
+        max-width: 100%;
+
+    }
+
+    .product-details input {
+        width: 50px;
+        height: 30px;
+        max-width: 100%;
+        padding: 0 10px;
+    }
+
+    .remove-item {
+        width: 40px;
+        height: 30px;
+        max-width: 100%;
+        margin-right: 40px;
+    }
+
+
+label {
+    margin: 0 30px;
+    display: flex;
+}
+
+
+/* product 1 */
+.product-one {
+    margin-left: 30px;
+    margin-right: 50px;
+}
+  
+.quantity1 {
+    margin:0 50px 0 90px;
+}
+
+/* 2 */
+
+.product-two {
+    margin-left: 8px;
+}
+
+.quantity2 {
+    margin:0 46px 0 146px;
+}
+
+.product-three {
+    margin-left: 86px;
+}
+
+.quantity3 {
+    margin: 0 46px 0 146px;
+}
+
+.product-four {
+    margin-left: 25px;
+}
+
+.quantity4 {
+    margin: 0 44px 0 144px;
+}
+
+hr {
+    margin: 20px 30px 0 30px;
+}
+
+
+.total__all {
+    text-align: center;
+    margin: 0 0 20px 40%;
+    font-weight: 600;
+    font-family: sans-serif;
+}
+
+.total {
+    margin: 20px 0 40px 60px;
+}
+
+.total p {
+    margin: 30px 0;
+    font-size: 18px;
+}
+
+.total span {
+    margin-left: 80px;
+}
+
+.vanh {
+    margin: 20px 40px;
+}
+
+
+.cart-content-right-button{
+    text-align: center;
+    align-items: center;
+}
+.cart-content-right-button button{
+    padding: 0 18px;
+    height: 35px;
+    cursor: pointer;
+    margin-top: 30px;
+}
+.cart-content-right-button button:last-child{
+    background-color: #fff;
+    border: 1px solid black;
+    margin-right: 20px;
+}
+.cart-content-right-button button:last-child:hover{
+    background-color: #ddd;
+}
+.cart-content-right-button button:last-child{
+    background-color: black;
+    color: white;
+    border: none;
+    border: 1px solid black;
+}
+.cart-content-right-button button:last-child:hover{
+    background-color: #dddddd;
+    color: black;
+}
+
+.cart-content-right-thanhtoan {
+    margin-left: 30px;
+}
+
+.cart-content-right-thanhtoan p {
+    margin: 30px 25%;
+}
+</style>
+<body>
+    <h2>Cart List</h2>
+    <div class="cart">
+        <div class="container__products-right">
+            <div class="cart__imformation">
+                <span>PRODUCTS</span>
+                <span>PRODUCTS NAME</span>
+                <span>PRICE</span>
+                <span>QUANTITY</span>
+            </div>
+<hr>
+            <!-- 1 -->
+            <div class="product">
+              <img class="vanh__product-img" src="https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/c75b24397a1847a9b45fad0c00da4fb9_9366/Cap_White_HB6615_01_standard.jpg" alt="Product 1">
+              <div class="product-details">
+                <h3>	
+                    RELAXED STRAP-BACK CAP</h3>
+                <p class="product-one"> 132.32$</p>
+                <!-- <label for="quantity">Quantity:</label> -->
+                <input class="quantity1" type="number" id="quantity1"  value="1" min="1">
+                <button class="remove-item" data-price="132.32 " data-id="1">X</button>
+              </div>
+            </div>
+           
+            <!-- 2 -->
+            <div class="product">
+              <img class="vanh__product-img" src="https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/1f7102cb93ef48d7ba31ac3600bb5903_9366/Questar_Flow_NXT_Running_Shoes_Black_FY9559_01_standard.jpg" alt="Product 2">
+              <div class="product-details">
+                <h3>	
+                    QUESTAR FLOW NXT  RUNNING <br> SHOES</h3>
+                <p class="product-two"> 122.32$</p>
+                <!-- <label for="quantity">Quantity:</label> -->
+                <input class="quantity2" type="number" id="quantity2" value="1" min="1">
+                <button class="remove-item" data-price="122.32" data-id="1">X</button>
+              </div>
+            </div>
+          
+            <!-- 3 -->
+            <div class="product">
+                <img class="vanh__product-img" src="https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/b6c348e145334e9ea962a8e3000afff7_9366/Santiago_Lunch_Bag_Black_CJ9045_01_standard.jpg" alt="Product 3">
+                <div class="product-details">
+                  <h3>SANTIAGO LUNCH BAG</h3>
+                  <p class="product-three"> 52.32$</p>
+                  <!-- <label for="quantity">Quantity:</label> -->
+                  <input class="quantity3" type="number" id="quantity3"  value="1" min="1">
+                  <button class="remove-item" data-price="52.32" data-id="1">X</button>
+                </div>
+              </div>
+    
+            <!-- 4 -->
+    
+            <div class="product">
+                <img class="vanh__product-img" src="https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/0d6643051d09418cb9faae8801463fea_9366/adidas_Adventure_Winter_Crewneck_Sweatshirt_White_HK5017_21_model.jpg" alt="Product 4">
+                <div class="product-details">
+                  <h3>ADIDAS ADVENTURE WINTER <br> CREWNECK SWEATSHIRT</h3>
+                  <p class="product-four"> 220.35$</p>
+                  <!-- <label for="quantity">Quantity:</label> -->
+                  <input class="quantity4" type="number" id="quantity4"  value="1" min="1">
+                  <button class="remove-item" data-price="220.35" data-id="1">X</button>
+                </div>
+              </div>
+            
+        </div>
+        
+<div class="vanh__border"></div>
+
+        <div class="container__product-left">
+
+            <span class="total__all">GROSS PRODUCTS</span>
+            <div class="total">
+              <p>Total quantity: <span id="total-quantity">0</span></p>
+              <hr class="vanh">
+              <p>Total price:<span class="total-price" id="total-price">0</span>$</p>
+            </div>
+
+            <!-- checkout -->
+            <div class="cart-content-right-button">
+                <a href="http://127.0.0.1:5500/thanhtoan.html"><button> CHECKOUT</button></a>
+            </div>
+            <div class="cart-content-right-thanhtoan">
+                <p>ACCEPTED PAYMENT METHODS</p>
+                <img src="https://brand.assets.adidas.com/image/upload/f_auto,q_auto,fl_lossy/enUS/Images/visa-master-amex-discover-paypal-applepay-affirm-klarna-afterpay_tcm221-698514.png" alt="">
+            </div>
+        </div>
+      </div>
+      
+</body>
+<script>
+    // get all the remove buttons
+const removeButtons = document.querySelectorAll('.remove-item');
+
+// add click event listeners to the remove buttons
+removeButtons.forEach(button => {
+  button.addEventListener('click', function() {
+    const productId = this.getAttribute('data-id');
+    const productPrice = parseInt(this.getAttribute('data-price'));
+    const quantity = parseInt(document.querySelector(`#quantity${productId}`).value);
+    const totalQuantity = parseInt(document.querySelector('#total-quantity').textContent);
+    const totalPrice = parseInt(document.querySelector('#total-price').textContent);
+
+    // update the total quantity and price
+    document.querySelector('#total-quantity').textContent = totalQuantity - quantity;
+    document.querySelector('#total-price').textContent = productPrice * quantity;
+
+    // remove the product
+    this.parentNode.parentNode.remove();
+  });
+});
+
+// add input event listeners to the quantity inputs
+const quantityInputs = document.querySelectorAll('input[type="number"]');
+
+quantityInputs.forEach(input => {
+  input.addEventListener('input', function() {
+    const productId = this.getAttribute('id').replace('quantity', '');
+    const productPrice = parseInt(this.parentNode.querySelector('.remove-item').getAttribute('data-price'));
+    const quantity = parseInt(this.value);
+    const totalQuantity = parseInt(document.querySelector('#total-quantity').textContent);
+    const totalPrice = parseInt(document.querySelector('#total-price').textContent);
+
+    // update the total quantity and price
+    document.querySelector('#total-quantity').textContent = totalQuantity + quantity;
+    document.querySelector('#total-price').textContent = totalPrice + (productPrice * quantity);
+  });
+});
+
+</script>
+</html>
