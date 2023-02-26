@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>End-Thanh-Toan</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" 
+    integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./endthanhtoan.css">
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+
+.container__modal {
+    display: flex;
+    font-family: sans-serif;
+    max-width: 100%;
+    padding: 50px 200px;
+}
+
+.container__modal--one {
+    border: 1px solid white;
+    max-width: 100%;
+    width: 100%;
+}
+
+.container__modal-body--one {
+   border: 1px solid black;
+}
+
+.container__modal-body--one--heading {
+    text-align: center;
+
+}
+
+.heading {
+    text-align: center;
+    margin-bottom: 50px;
+    line-height: 2;
+}
+
+.debit__card {
+    border-radius: 5px;
+    display: flex;
+    padding: 0 40px;
+}
+
+.debit__card-items {
+    width: 20px;
+    max-width: 100%;
+    margin-left: 20px;
+}
+
+.debit__card-items-heading {
+    margin: 30px 150px 30px 10px;
+    font-weight: 600;
+}
+
+.debit__card-img {
+    max-width: 100%;
+}
+
+.debit__card-img img {
+    max-width: 100%;
+    width: 50px;
+    margin: 20px 0;
+}
+
+.container__modal-body--two {
+    border: 1px solid black;
+    max-width: 100%;
+    margin-bottom: 40px;
+    padding: 0 40px;
+}
+
+.container__modal-body--two--flex {
+    display: flex;
+    max-width: 100%;
+}
+
+.container__modal-body--two--flex img {
+    max-width: 100%;
+    width: 50px;
+}
+
+.vanh-ul {
+    max-width: 100%;
+    padding: 10px 70px;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.vanh-ul li {
+    margin: 10px 0;
+}
+
+
+
+.order__broducts a:hover {
+    color: #999;
+}
+
+.order__broducts a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 20px;
+    text-align: center;
+    margin:20px 80px;
+    position: relative;
+    top: 12px;
+}
+
+.icon__right {
+    margin-left: 130px;
+    max-width: 100%;
+
+}
+
+
+.container__modal--two {
+    border: 1px solid white;
+    margin-left: 30px;
+    padding:30px 0;
+    max-width: 100%;
+    width: 1000px;
+    margin-left: 80px;
+}
+
+.container__modal-body--two {
+    border: 1px solid black;
+    width: 720px;
+  max-width: 100%;
+
+}
+
+.container__modal-body--one--heading {
+    max-width: 100%;
+}
+
+.container__modal--two-quantity-first {
+    margin: 40px 0 20px 0;
+}
+
+.vanh__price-one {
+    margin-left: 100px;
+    max-width: 100%;
+}
+
+.vanh__price-two {
+    margin-left: 150px;
+    max-width: 100%;
+}
+
+.vanh__price-three {
+    max-width: 100%;
+    margin-left: 150px;
+}
+
+
+.border__order {
+    border: 0.1px solid #dddddd;
+    margin: 20px 0;
+  max-width: 100%;
+
+}
+
+.enter__code {
+    max-width: 100%;
+    width: 100%;
+    height: 55px;
+    margin: 30px 0;
+    font-size: 16px;
+    padding: 20px;
+}
+
+.icon__star {
+    max-width: 100%;
+    font-size: 20px;
+    position: relative;
+    left: 85%;
+    bottom: 58px;
+}
+
+.product__imformation-vanh {
+    display: flex;
+    margin: 30px 0;
+    max-width: 100%;
+}
+
+.product__imformation-vanh img {
+    max-width: 100%;
+    width: 150px;
+    margin: 0 30px;
+}
+
+.product__imformation-vanh ul {
+    margin: 30px 0;
+}
+
+.vanh_thanhtoan {
+    margin-top: 40px;
+  max-width: 100%;
+
+}
+
+.vanh_thanhtoan--picture {
+    margin: 20px 0;
+  max-width: 100%;
+
+}
+
+
+
+.bottom__end {
+    width: 100%;
+    height: 100px;
+    background: #363738;
+    font-family: sans-serif;
+    text-align: center;
+}
+
+.bottom__end--header {
+    display: flex;
+    margin-left: 35%;
+    padding: 20px 0;
+}
+
+.vanh__bottom-them-product {
+    color: black;
+}
+
+
+.vanh__bottom-them-product-one ul li {
+    color: black;
+}
+
+.bottom__end--address {
+    padding:0 60px 50px 60px;
+    color: white;
+    line-height: 1.5;
+}
+
+.vanh__bottom-them-product {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.border_end {
+    height: 15px;
+    border: 0.1px solid rgb(212, 209, 209);
+    background: #999;
+    margin: 0 20px;
+  max-width: 100%;
+
+}
+
+.bottom__end--note {
+    color: #999;
+  max-width: 100%;
+
+}
+
+.bottom__end--items {
+    text-decoration: none;
+    color: white;
+  max-width: 100%;
+
+}
+
+/* input */
+
+.payment-form {
+    width: 720px;
+  margin: auto;
+  padding: 20px 60px;
+  background-color: white;
+  border-radius: 5px;
+  max-width: 100%;
+  height: 450px;
+}
+
+input[type=text] {
+  width: 100%; 
+  padding: 12px 20px;
+  margin: 20px 0;
+  box-sizing: border-box;
+  border: 2px solid #999;
+  border-radius: 5px;
+  max-width: 100%;
+
+}
+
+button[type=submit] {
+    width: 400px;
+    height: 50px;
+    border-radius: 3px;
+    border: 1px solid black;
+    background-color: black;
+    box-shadow: 2px 2px 2px 2px rgb(203, 197, 197);
+    max-width: 100%;
+    margin: 50px;
+    color: white;
+    font-size: 20px;
+}
+
+
+.error-message {
+  color: red;
+  font-size: 12px;
+  margin-bottom: 5px;
+}
+
+.payment-form h2 {
+    margin-bottom: 20px;
+}
+
+
+.payment-form button:hover {
+    background-color: #363636;
+}
+.payment-form button {
+    position: relative;
+    top: 50px;
+}
+
+/* phan them address */
+
+.vanh_trangkhac {
+    margin: 20px 0;
+}
+
+.vanh_trangkhac-information {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.vanh_trangkhac p {
+    margin: 20px 0 20px 30px;
+}
+
+hr {
+    margin: 30px;
+}
+
+</style>
+<body>
+    <div class="container__modal">
+        <!-- phan left thanh toan -->
+        <div class="container__modal--one">
+
+            <h2 class="container__modal-body--one--heading">PAYMENT METHODS</h2>
+            <p class="heading">All transactions are safe and secure</p>
+            <!-- phan thanh toan khi nhan hang -->
+       <div class="container__modal-body--two">
+           <div class="container__modal-body--two--flex">
+               <!-- <button class="payment"></button> -->
+               <input class="debit__card-items" type="checkbox" >
+               <span class="debit__card-items-heading">PAYMENT ON DELIVERY</span>
+               <img class="picture__money" src="https://www.adidas.com.vn/static/checkout/react/53b3ef3/assets/img/icon-adidas-cash-on-delivery.svg" alt="">
+           </div>
+           <!-- <p class="heading">No need to pay online - pay cash using the correct change after your items are delivered!
+               Your bank account details will only be required if you wish to return any product for a refund.</p> -->
+
+           <ul class="vanh-ul">
+               <li>No need to pay online - pay cash using the correct change after your items are delivered!</li>
+               <li> Your bank account details will only be required if you wish to return any product for a refund.</li>
+           </ul>
+       </div>
+
+
+            <div class="container__modal-body--one">
+
+                <!-- phan thanh toan bang the -->
+                <div class="debit__card">
+                    <!-- <button class="debit__card-items"></button> -->
+                    <input class="debit__card-items" type="checkbox" name="" id="">
+                    <span class="debit__card-items-heading">CREDIT/DEBIT CARD</span>
+                    <div class="debit__card-img">
+                        <img src="https://www.adidas.com.vn/static/checkout/react/53b3ef3/assets/img/icon-adidas-visa.svg" alt="">
+                        <img src="https://www.adidas.com.vn/static/checkout/react/53b3ef3/assets/img/icon-adidas-master-card.svg" alt="">
+                    </div>
+                </div>
+
+                <!-- input -->
+
+                <div class="payment-form">
+                    <h2>
+                        Billing Information</h2>
+                    <form>
+                      <label for="cardNumber">Card number:</label>
+                      <input type="text" id="cardNumber" name="cardNumber" placeholder="Enter card number">
+                      <div id="cardNumberError" class="error-message"></div>
+                  
+                      <label for="cardName">Name on the Card:</label>
+                      <input type="text" id="cardName" name="cardName" placeholder="Enter the name on the card">
+                      <div id="cardNameError" class="error-message"></div>
+                  
+                      <label for="cardCode">Card making date:</label>
+                      <input type="text" id="cardCode" name="cardCode" placeholder="20/10">
+                      <div id="cardCodeError" class="error-message"></div>
+                  
+                      <button type="submit" id="submitButton">Order<i class="fa-solid fa-arrow-right icon__right"></i></button>
+                    </form>
+                  </div>
+            </div>
+
+
+        </div>
+        
+
+        <!-- phan right phan thong tin khac hang -->
+        <div class="container__modal--two">
+            <h2 class="container__modal-body--one--heading">ORDER SUMMARY</h2>
+            <div class="container__modal--two-quantity-first">
+                <span class="vanh__information-one">3 products:</span>
+                <span class="vanh__price-one">356.78$</span>
+            </div>
+
+            <div class="container__modal--two-quantity-two">
+                <span class="vanh__information">Delivery:</span>
+                <span class="vanh__price-two">Free</span>
+            </div>
+
+            <!-- border -->
+            <div class="border__order"></div>
+
+            <div class="container__modal--two-quantity-thirt">
+                <span class="vanh__information">Total:</span>
+                <span class="vanh__price-three">456.78$</span>
+            </div>
+
+             <!-- border -->
+             <div class="border__order"></div>
+
+             <input class="enter__code" type="text" placeholder="Enter your promo code">
+             <i class="fa-regular fa-star icon__star"></i>
+
+
+<hr>
+<!-- phan quan trong link trang khac -->
+             <div class="vanh_trangkhac">
+                <h2 class="vanh_trangkhac-information">DELIVERY AND RECIPIEN INFORMATION</h2>
+                <p><strong>Name:</strong> <span id="name"></span></p>
+                <p><strong>House Number/ Street Name:</strong> <span id="addressNumber"></span></p>
+                <p><strong>Builing Name/ Address:</strong> <span id="address"></span></p>
+                <p><strong>Email:</strong> <span id="email"></span></p>
+                <p><strong>Phone Number:</strong> <span id="phone"></span></p>
+                <p><strong>National:</strong> <span id="country"></span></p>
+                <p><strong>Postal Code:</strong> <span id="postalCode"></span></p>
+            
+              </div>
+              <hr>
+                 
+
+             <h2 class="container__modal-body--one--heading">ORDER DETAILS</h2>
+             <!-- products -->
+             <!-- 1 -->
+             <div class="product__imformation-vanh">
+                <img src="https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/c75b24397a1847a9b45fad0c00da4fb9_9366/Cap_White_HB6615_01_standard.jpg" alt="">
+                <ul>
+                <p></p>
+                    <li>RELAXED STRAP-BACK CAP</li>
+                    <li>Price: 132.32$</li>
+                    <li>Color: White</li>
+                </ul>
+             </div>
+
+             <!-- 2 -->
+             <div class="product__imformation-vanh">
+                <img src="https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/b6c348e145334e9ea962a8e3000afff7_9366/Santiago_Lunch_Bag_Black_CJ9045_01_standard.jpg" alt="">
+                <ul>
+                <p></p>
+                    <li>SANTIAGO LUNCH BAG</li>
+                    <li>Price: 52.23$</li>
+                    <li>Color: Black White</li>
+                </ul>
+             </div>
+
+             <!-- 3 -->
+             <div class="product__imformation-vanh">
+                <img src="https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/1f7102cb93ef48d7ba31ac3600bb5903_9366/Questar_Flow_NXT_Running_Shoes_Black_FY9559_01_standard.jpg" alt="">
+                <ul>
+                    <li> QUESTAR FLOW NXT  RUNNING SHOES</li>
+                    <li>Price:122.32$</li>
+                    <li>Color: Black</li>
+                </ul>
+             </div>
+
+              <!-- border -->
+              <div class="border__order"></div>
+
+              <div>
+                <h4 class="vanh_thanhtoan">ACCEPTANCE PAYMENT METHOD</h4>
+                <div class="vanh_thanhtoan--picture">
+                    <img src="https://brand.assets.adidas.com/image/upload/f_auto,q_auto,fl_lossy/viVN/Images/paymentmethod_VN_new_tcm337-690224.png" alt="">
+                </div>
+              </div>
+        </div>
+    </div>
+
+    <!-- phan cuoi -->
+
+    <div class="bottom__end">
+        <div class="bottom__end--header">
+            <a class="bottom__end--items" href=""><span>Privacy Policy</span></a>
+            <div class="border_end"></div>
+            <a class="bottom__end--items" href=""><span>Terms and conditions</span></a>
+            <div class="border_end"></div>
+            <a class="bottom__end--items" href=""><span>Company information</span></a>
+        </div>
+        <p class="bottom__end--note">© 2023 adidas Vietnam Company Limited</p>
+    </div>
+
+</body>
+
+<!-- phan js check thong tin the thanh toan -->
+<script>
+    const form = document.querySelector('form');
+    const cardNumberInput = document.querySelector('#cardNumber');
+    const cardNameInput = document.querySelector('#cardName');
+    const cardCodeInput = document.querySelector('#cardCode');
+    const cardNumberError = document.querySelector('#cardNumberError');
+    const cardNameError = document.querySelector('#cardNameError');
+    const cardCodeError = document.querySelector('#cardCodeError');
+    const submitButton = document.querySelector('#submitButton');
+
+form.addEventListener('submit', function(event) {
+  if (!cardNumberInput.value) {
+    cardNumberError.textContent = 'Please enter card number';
+    event.preventDefault();
+  }
+
+  if (!cardNameInput.value) {
+    cardNameError.textContent = 'Please enter the name on the card';
+    event.preventDefault();
+  }
+
+  if (!cardCodeInput.value) {
+    cardCodeError.textContent = 'Please enter the date of the card';
+    event.preventDefault();
+  }
+});
+
+cardNumberInput.addEventListener('input', function() {
+  cardNumberError.textContent = '';
+});
+
+cardNameInput.addEventListener('input', function() {
+  cardNameError.textContent = '';
+});
+
+cardCodeInput.addEventListener('input', function() {
+  cardCodeError.textContent = '';
+});
+
+</script>
+
+ <!-- phan hien thi trang khac -->
+ <script>
+    const params = new URLSearchParams(window.location.search);
+    
+    document.getElementById('name').textContent = params.get('name');
+    document.getElementById('addressNumber').textContent = params.get('addressNumber');
+    document.getElementById('address').textContent = params.get('address');
+    document.getElementById('email').textContent = params.get('email');
+    document.getElementById('phone').textContent = params.get('phone');
+    document.getElementById('country').textContent = params.get('country');
+    document.getElementById('postalCode').textContent = params.get('postalCode');
+  </script>
+</html>
