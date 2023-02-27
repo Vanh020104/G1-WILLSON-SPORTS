@@ -41,9 +41,11 @@
 .container__top {
     padding-left: 80px;
     width: 300px;
-    height: 50px;
+    height: 100px;
     color: rgb(73, 73, 252);
     margin-right: 50px;
+    position: relative;
+    bottom: 20px;
 }
 
 .icon__search {
@@ -172,13 +174,14 @@
     max-width: 100%;
 }  
 
-
 .app__importer {
     text-align: center;
     display: flex;
     margin: -20px 25.5%;
     z-index: 1;
-    
+    position: relative;
+    bottom: 50px;
+    z-index: 1;
 }
 
 .imformation {
@@ -545,7 +548,7 @@ ul.products li .product-info .product-price{
 .vanh-icon {
     display: flex;
     max-width: 100%;
-    margin-left: 100px;
+    margin-left: 140px;
 }
 
 .vanh-icon img {
@@ -659,10 +662,12 @@ ul.products li .product-info .product-price{
     box-shadow: 1px 1px 1px 2px rgb(133, 232, 245);
 }
 
+
 .bottom__end--logo-hearder-group1 {
     width: 200px;
-    margin: 10px 0;
+    /* margin: 10px 0; */
     border-radius: 4px;
+    height: 75px;
 }
 
 .bottom__end--logo-items {
