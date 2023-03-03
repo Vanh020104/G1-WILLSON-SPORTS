@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" 
+    integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<style>
+    
+
+*{
+    margin: 0;
+    padding: 0;
+}
+row {
+    list-style: none;
+}
+.container{
+    padding: 50px 22px 0px 100px;
+}
+.container{
+    padding: auto;
+}
+.content h1{
+    font-family: sans-serif;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 28px;
+    margin: 0px 0px 15px;
+    text-transform: uppercase;
+}
+header{
+    background-color: #eceff1;
+    line-height: 22px;
+    padding: 30px;
+    display: flex;
+}
+header i{
+    padding: 2px 20px;
+    color: rgb(0, 249, 104);
+    transform: translateX(-20%);
+}
+.madonhang{
+    line-height: 22px;
+    padding: 15px 0px 0px;
+}
+.p-small{
+    line-height: 22px;
+    padding: 15px 0px 0px;
+}
+.h1-2{
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 28px;
+    margin: 40px 0px 15px;
+    text-transform: uppercase;
+}
+.icon{
+    padding: 10px;
+    display: flex;
+    flex: 22px;
+}
+.icon p{
+    line-height: 22px;
+    margin: 1px 1px 15px 20px;
+}
+.iconn p strong{
+    display: inline;
+    font-weight: 700;
+    line-height: 22px;
+}
+.ss-icon{
+    color: black;
+    padding: 10px 10px 10px 10px;
+    width: 30px;
+    height: 30px;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    top: -15px;
+    left: 50%;
+    border-radius: 10%;
+    transform: translateX(-10%);
+}
+.p7{
+    line-height: 22px;
+    margin: 0px 0px 20px ;
+}
+.article{
+    padding-top: 20px;
+    border-top: 1px solid #dddddd;
+    position: relative;
+}
+h3{
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 20px;
+    margin: 40px 0px 15px;
+    text-transform: uppercase;
+}
+
+
+/* phan cuoi end */
+
+.vanh__bottom-them {
+    display: flex;
+    max-width: 100%;
+    padding: 50px;
+    background-color: #ededed;
+}
+
+.vanh__bottom-them-product {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.vanh__bottom-them-product-one {
+    margin-left: 10%;
+}
+
+
+.vanh__bottom-them-product-one ul{
+    text-align: left;
+    margin-top: 10px;
+    list-style-type: none;
+    font-size: 16px;
+    line-height: 2;
+    cursor: pointer;
+}
+
+.vanh__bottom-them-product-one ul a {
+    text-decoration: none;
+    color: black;
+}
+
+.vanh__bottom-them-product-one ul a:hover {
+    color: #666;
+}
+
+.vanh__bottom-them-product-one ul li:hover {
+    color: #666;
+}
+
+.vanh-icon {
+    display: flex;
+    max-width: 100%;
+    margin-left: 140px;
+}
+
+.vanh-icon img {
+    margin: 20px 10px 0 10px;
+    font-size: 40px;
+}
+
+.vanh-icon-three  {
+    position: relative;
+    bottom: 3px;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.vanh-icon-five {
+    position: relative;
+    bottom: 4px;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+
+.vanh_bottom-end {
+    border: 1px solid black;
+    width: 100%;
+    max-width: 100%;
+    color: white;
+    background-color: #3a3b3d;
+}
+.bottom__end {
+    text-align: center;
+    max-width: 100%;
+    background-color: #f5f5f5;
+    color: white;
+    margin: 30px 0 0 0;
+}
+
+.vanh__bottom-them-product {
+    color: black;
+}
+
+
+.vanh__bottom-them-product-one ul li {
+    color: black;
+}
+
+.bottom__end--address {
+    padding:0 60px 50px 60px;
+    color: white;
+    line-height: 1.5;
+}
+
+.vanh__bottom-them-product {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.bottom__end-items {
+    display: flex;
+    margin-left: 22%;
+}
+
+
+.bottom__end-items--notification {
+    text-decoration: none;
+    max-width: 100%;
+    margin: 40px 0;
+    color: white;
+}
+
+.bottom__end-items--border {
+    border:1px solid #d5d4d4;
+    background-color: #cdcaca;
+    margin: 40px;
+    height: 20px;
+}
+
+.bottom__end--logo {
+    text-align: center;
+}
+
+.bottom__end--logo-hearder {
+   margin: 0 60px;
+}
+
+.bottom__end--logo-hearder-img {
+    width: 200px;
+    border-radius: 4px;
+}
+
+.bottom__end--logo-hearder-img:hover {
+    border: 1px solid #ededed;
+    box-shadow: 1px 1px 1px 2px rgb(133, 232, 245);
+}
+
+.bottom__end--logo-hearder-group1 {
+    width: 200px;
+    /* margin: 10px 0; */
+    border-radius: 4px;
+    height: 75px;
+}
+
+.bottom__end--logo-items {
+    margin: 20px 0 40px 0;
+}
+
+
+
+</style>
+<body>
+     <section class="container">
+        <!-- logo -->
+
+
+        <a href=""><img src="" alt=""></a>
+        <div class="content">
+            <h1>THANKS YOU!</h1>
+            <header class="header">
+                <i class="fa-solid fa-check"></i>
+                <p>Your order is being processed</p>
+            </header>
+            <p class="madonhang">Code orders: </p>
+            <p class="p-small">
+                You will receive a confirmation email once we have processed your order.
+                If you have an account, the order <br> will appear there the day after you receive the email.
+            </p>
+        </div>
+        <h1 class="h1-2">NEXT STEPS</h1>
+        <div class="icon">
+            <a href=""><i class="fa-solid fa-shop ss-icon"></i></a>
+            <p><strong>In process</strong> <br>
+                Your order will be prepared at the warehouse.</p>
+        </div>
+        <div class="icon">
+            <a href=""><i class="fa-solid fa-truck-fast ss-icon"></i></a>
+            <p><strong>On the way</strong> <br>
+                Once your order is shipped, you will receive a tracking link by email.</p>
+        </div>
+        <div class="icon">
+            <a href=""><i class="fa-solid fa-check ss-icon"></i></a>
+            <p><strong>
+                Delivered</strong> <br>
+                Your order will be delivered to the address or pick up point selected.</p>
+        </div>
+
+        <P class="p7">Are you wondering? Find all the answers above.</P>
+
+        <article class="article">
+            <h3>SUPPORT FEEDBACK</h3>
+            <p>How likely are you to recommend Willson Sport.com.vn to your friends? Choose a rating below and fill out a short survey in just two minutes*</p>
+            <p>*We, Willson Sport Data Controller: Willson Sport AG, <br>
+                Willson Sport sport GmbH and Willson Sport International Trading AG, fell in love <br>
+                Demand Qualtrics - a market research firm specializing in<br>
+                industry - on our behalf, conduct the survey <br>
+                this consumer. Collected data will be processed <br>
+                 reasoned by Qualtrics solely to study public opinion. All <br>
+                 The results of such research are provided to Willson Sport and its parties
+                 affiliated with Willson Sport and will be used to improve<br>
+                  improve our products and services. Can see more <br>
+                  more information at Wilson's Privacy Policy. <br><br><br>
+                
+                   CHAT WITH CONSULTANT HERE OR ORDER THROUGH HOTLINE 0971710215</p>
+        </article>
+    </section>
+ 
+
+
+    <!-- phan end -->
+    <div class="bottom__end">
+        <div class="vanh__bottom-them">
+            <div class="vanh__bottom-them-product-one">
+                    <span class="vanh__bottom-them-product">
+                        PRODUCTS
+                    </span>
+                        <ul>
+                            <li><a href="http://127.0.0.1:5500/shoe2.html">- Shoes Men</a></li>
+                            <li><a href="http://127.0.0.1:5500/bag.html">- Bag Adidas</a></li>
+                            <li><a href="http://127.0.0.1:5500/clother.html">- Clothes Men fashion</a></li>
+                            <li><a href="http://127.0.0.1:5500/shoe2.html">- Cap/Hat Adidas</a></li>
+                            <li><a href="http://127.0.0.1:5500/accessory.html">- Accessory Sports</a></li>
+                            <li>- Products New</li>
+                            <li>- Products Hot</li>
+                            <li>- All Products</li>
+                        </ul>
+            </div>
+
+            <div class="vanh__bottom-them-product-one">
+                <span class="vanh__bottom-them-product">
+                    FOLLOW US
+                </span>
+                  <ul class="vanh-icon">
+                    <li><img class="vanh-icon-one" src="https://dongphucphuongthao.vn/wp-content/uploads/2022/06/fb.png"></li>
+                    <li><img class="vanh-icon-two" src="https://dongphucphuongthao.vn/wp-content/uploads/2022/06/g.png"></li>
+                    <li><img class="vanh-icon-three" src="https://dongphucphuongthao.vn/wp-content/uploads/2022/06/insta.png" ></li>
+                    <li><img class="vanh-icon-four" src="https://dongphucphuongthao.vn/wp-content/uploads/2022/06/yt.png"></li>
+                    <li><img class="vanh-icon-five" src="https://dongphucphuongthao.vn/wp-content/uploads/2022/06/p.png"></li>
+                    <li><img class="vanh-icon-six" src="https://dongphucphuongthao.vn/wp-content/uploads/2022/06/tiktok.png"></li>
+                  </ul>  <br><br>
+                  <div class="bottom__end--logo">
+                    <a href="" class="bottom__end--logo-hearder">
+                        <img class="bottom__end--logo-hearder-img" src="https://s3.amazonaws.com/cdn.freshdesk.com/data/helpdesk/attachments/production/42008041469/original/Mo9gDy2XMZLppkUw4sWCsYV-lk65HqqgQw.gif?1539077990" alt="">
+                    </a>
+                    <img class="bottom__end--logo-hearder-group1" src="./logoanh.jpg" alt="">
+                </div>
+            </div>
+
+            <div class="vanh__bottom-them-product-one">
+                <span class="vanh__bottom-them-product">
+                    SUPPORT
+                </span>
+                    <ul>
+                        <li>- Customer Service Help</li>                
+                        <li>- Store search engine</li>
+                        <li>- Size Chart</li>
+                        <li>- Pay</li>
+                        <li>- Delivery</li>
+                        <li>- Returns & Refunds</li>
+                        <li>- Promotion</li>
+                        <li>- Sitemap</li>
+                    </ul>
+            </div>
+
+            
+        </div>
+
+
+        <div class="vanh_bottom-end">
+            <div class="bottom__end-items">
+               <a class="bottom__end-items--notification" href="">PRIVACY POLICY</a>
+               <div class="bottom__end-items--border"></div>
+               <a class="bottom__end-items--notification" href="">OPERATION REGULATIONS</a>
+               <div class="bottom__end-items--border"></div>
+               <a class="bottom__end-items--notification" href="">SHIPPING POLICY</a>
+               <div class="bottom__end-items--border"></div>
+               <a class="bottom__end-items--notification" href="">REFUND AND REFUND POLICY</a>
+            </div>
+            
+            <div class="bottom__end--address">
+                Address: No. 8A, Ton That Thuyet Street, My Dinh 2 Ward, Cau Giay District, Hanoi City, Vietnam. Support call center: 19001221 - Email: group1sport@gmail.com
+                Responsible for Content Management: Group1 Sport - Contact phone: 024 6783210 (ext 4678)
+                Enterprise code: 0106773786 first issued by Hanoi Department of Planning and Investment on October 20, 2015
+                © 2015 - Copyright belongs to G1 Sport Co., Ltd.
+            </div>
+
+        </div>
+    </div>
+
+  
+</body>
+
+
+<!-- phan hien thi trang khac -->
+<script>
+    const params = new URLSearchParams(window.location.search);
+    
+    document.getElementById('name').textContent = params.get('name');
+    document.getElementById('addressNumber').textContent = params.get('addressNumber');
+    document.getElementById('address').textContent = params.get('address');
+    document.getElementById('email').textContent = params.get('email');
+    document.getElementById('phone').textContent = params.get('phone');
+    document.getElementById('country').textContent = params.get('country');
+    document.getElementById('postalCode').textContent = params.get('postalCode');
+  </script>
+</html>
