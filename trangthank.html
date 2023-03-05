@@ -1,63 +1,122 @@
+
+
+
+
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" 
     integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" 
     crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+    <link rel="stylesheet" href="bill3.css">
+
 </head>
 <style>
-    
-
-*{
+    *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
-row {
-    list-style: none;
-}
-.container{
-    padding: 50px 22px 0px 100px;
-}
-.container{
-    padding: auto;
-}
-.content h1{
-    font-family: sans-serif;
-    font-size: 30px;
-    font-weight: 700;
-    line-height: 28px;
-    margin: 0px 0px 15px;
-    text-transform: uppercase;
-}
-header{
-    background-color: #eceff1;
-    line-height: 22px;
-    padding: 30px;
+.row{
     display: flex;
+    flex-wrap: wrap;
 }
-header i{
-    padding: 2px 20px;
-    color: rgb(0, 249, 104);
-    transform: translateX(-20%);
+html{
+    font-family: sans-serif;
+    
 }
-.madonhang{
-    line-height: 22px;
-    padding: 15px 0px 0px;
+.fullpage{
+    display: flex;
+    padding: 50px 22px 20px 80px;
 }
-.p-small{
-    line-height: 22px;
-    padding: 15px 0px 0px;
+.container{
+    display: flex;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.bet-ween{
+    padding-left: 35%; 
+    font-size: 30px;
+    height: 100px;
+    margin-bottom: 50px;
+} 
+.icon-check{
+    padding-left: 15%;
+    color: rgb(69, 69, 239);
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+.left{
+    padding: 10px 20px 2px 20px;
+    width: 40%;
+    padding-left: 8%;
+ }
+ .ul-2{
+     padding-bottom: 30px;
+     font-size: 18px;
+ }
+ .submit{
+     background-color: white;
+     color: black;
+     padding: 20px;
+     border-radius: 10px;
+    text-decoration: none;
+   border: 1px solid black; 
+   margin-left: 60px;
+ }
+ .submit:hover{
+     background-color: black;
+     color: white;
+     cursor: pointer;
+ }
+.right{
+    padding: 10px 10px 0px 10px;
+    width: 37%;
+    border: 1px solid #ccc;
+    border-radius: 50px;
+    margin-left: 150px;
+    margin-top: 40px;
+}
+.right-bottom{
+    padding: 10px;
+}
+.right-bottom p{
+    font-size: 18px;
+    padding: 10px 30px 1px 10px;
+}
+.donhang{
+    padding-bottom: 10px;
+    font-weight: 600;
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+.bottom-1{
+    padding: 1px solid #ccc;
+    padding-top: 2px;
+    position: absolute;  
+}
+.bottom{
+    padding: 1px solid #ccc;
+    padding-top: 5px;
+    font-size: 18px;
+    padding-left: 80%;
 }
 .h1-2{
     font-size: 30px;
     font-weight: 700;
     line-height: 28px;
-    margin: 40px 0px 15px;
+    margin: 40px 0px 20px 120px;
     text-transform: uppercase;
 }
 .icon{
@@ -68,6 +127,7 @@ header i{
 .icon p{
     line-height: 22px;
     margin: 1px 1px 15px 20px;
+    font-size: 18px;
 }
 .iconn p strong{
     display: inline;
@@ -92,18 +152,14 @@ header i{
 .p7{
     line-height: 22px;
     margin: 0px 0px 20px ;
+    font-size: 18px;
+    margin-bottom: 80px;
+    cursor: pointer;
 }
-.article{
-    padding-top: 20px;
-    border-top: 1px solid #dddddd;
-    position: relative;
-}
-h3{
-    font-size: 20px;
-    font-weight: 700;
-    line-height: 20px;
-    margin: 40px 0px 15px;
-    text-transform: uppercase;
+
+.bottom{
+    width: 50%;
+    padding-top: 50px;
 }
 
 
@@ -114,6 +170,7 @@ h3{
     max-width: 100%;
     padding: 50px;
     background-color: #ededed;
+    margin-top: 60px;
 }
 
 .vanh__bottom-them-product {
@@ -259,67 +316,102 @@ h3{
 }
 
 
+.right-bottom ul {
+    margin-left: 50px;
+}
+.right-bottom li {
+    display: flex;
+}
 
+.vanh__quantity {
+    position: relative;
+    bottom: 20px;
+    left: 25px;
+    color: #666;
+}
+
+
+.like {
+    margin-bottom: 30px;
+}
+
+.right-bottom p {
+    margin: 10px 0 ;
+}
+h4 {
+    margin-top: 100px;
+    display: flex;
+    text-align: center;
+    line-height: 1.5;
+    font-size: 18px;
+}
+
+.enter {
+    margin-right: 10px;
+}
 </style>
 <body>
-     <section class="container">
-        <!-- logo -->
+    <section class="fullpage">
+        <div class="container">
+            <div class="page-content">
+                <div class="bet-ween">
+                    <a href=""><i class="fa-sharp fa-solid fa-circle-check icon-check"></i></a>
+                    <h1>THANKS YOU!</h1>
+                </div>
+            <div class="row">
+                <div class="left">
+                    <h1 class="h1-2">NEXT STEPS</h1>
+                <div class="icon">
+                    <a href=""><i class="fa-solid fa-shop ss-icon"></i></a>
+                    <p><strong>In process</strong> <br>
+                        Your order will be prepared at the warehouse.</p>
+                </div>
+                <div class="icon">
+                    <a href=""><i class="fa-solid fa-truck-fast ss-icon"></i></a>
+                    <p><strong>On the way</strong> <br>
+                        Once your order is shipped, you will receive a tracking link by email.</p>
+                </div>
+                <div class="icon">
+                    <a href=""><i class="fa-solid fa-check ss-icon"></i></a>
+                    <p><strong>Delivered</strong> <br>
+                        Your order will be delivered to the address or pick up point selected.</p>
+                </div>
+                <p class="p7">Are you wondering? Find all the answers above.</p>
+                <a class="submit" href="http://127.0.0.1:5500/adidas.html"> CONTINUE SHOPPING US</a>
+                <h4>Your order will soon be sent to you within the next 2 to 3 days. Thank You!!!</h4>
+                </div>
 
+                <div class="right">
+                    <div class="right-bottom">
+                        <p class="donhang"> Information line:</p>
+                        <div class="bottom-1"></div>
+                        <p> <strong>Customer name:</strong><span id="customerName"></span></p>
+                        <p><strong>Phone number: </strong><span id="phoneNumber"></span></p>
+                        <p><strong>Order date:</strong> <span id="orderDate"></span></p>
+                        <p><strong>Address:</strong><span id="address"></span></p>
+                        <p class="product"><strong>Product:</strong>
+                            <ul>
+                                <li><strong class="enter">-</strong>  RELAXED STRAP-BACK CAP <p class="vanh__quantity">X1</p></li>
+                                <li><strong class="enter">-</strong>  QUESTAR FLOW NXT RUNNING SHOES <p class="vanh__quantity">X1</p></li>
+                                <li><strong class="enter">-</strong>  SANTIAGO LUNCH BAG <p class="vanh__quantity">X1</p></li>
+                                <li><strong class="enter">-</strong>  ADIDAS ADVENTURE WINTER CREWNECK SWEATSHIRT <p class="vanh__quantity">X1</p></li>
+                            </ul>
+                        </p>
+                        <p><strong>Shipping fee:</strong> 21.50$</p>
+                        <p><strong>Discount:</strong> 0$</p>
+                        <p><strong>Total order value:</strong> 587.8$</p>
+                        <p class="like">You will receive a confirmation email once we have processed your order. If you have an account, the order will appear there as soon as you receive the email.</p> </div>
+                    </div>
+                </div>
 
-        <a href=""><img src="" alt=""></a>
-        <div class="content">
-            <h1>THANKS YOU!</h1>
-            <header class="header">
-                <i class="fa-solid fa-check"></i>
-                <p>Your order is being processed</p>
-            </header>
-            <p class="madonhang">Code orders: </p>
-            <p class="p-small">
-                You will receive a confirmation email once we have processed your order.
-                If you have an account, the order <br> will appear there the day after you receive the email.
-            </p>
+               
         </div>
-        <h1 class="h1-2">NEXT STEPS</h1>
-        <div class="icon">
-            <a href=""><i class="fa-solid fa-shop ss-icon"></i></a>
-            <p><strong>In process</strong> <br>
-                Your order will be prepared at the warehouse.</p>
         </div>
-        <div class="icon">
-            <a href=""><i class="fa-solid fa-truck-fast ss-icon"></i></a>
-            <p><strong>On the way</strong> <br>
-                Once your order is shipped, you will receive a tracking link by email.</p>
-        </div>
-        <div class="icon">
-            <a href=""><i class="fa-solid fa-check ss-icon"></i></a>
-            <p><strong>
-                Delivered</strong> <br>
-                Your order will be delivered to the address or pick up point selected.</p>
-        </div>
-
-        <P class="p7">Are you wondering? Find all the answers above.</P>
-
-        <article class="article">
-            <h3>SUPPORT FEEDBACK</h3>
-            <p>How likely are you to recommend Willson Sport.com.vn to your friends? Choose a rating below and fill out a short survey in just two minutes*</p>
-            <p>*We, Willson Sport Data Controller: Willson Sport AG, <br>
-                Willson Sport sport GmbH and Willson Sport International Trading AG, fell in love <br>
-                Demand Qualtrics - a market research firm specializing in<br>
-                industry - on our behalf, conduct the survey <br>
-                this consumer. Collected data will be processed <br>
-                 reasoned by Qualtrics solely to study public opinion. All <br>
-                 The results of such research are provided to Willson Sport and its parties
-                 affiliated with Willson Sport and will be used to improve<br>
-                  improve our products and services. Can see more <br>
-                  more information at Wilson's Privacy Policy. <br><br><br>
-                
-                   CHAT WITH CONSULTANT HERE OR ORDER THROUGH HOTLINE 0971710215</p>
-        </article>
     </section>
- 
 
+    
+    <!-- phan cuoi end -->
 
-    <!-- phan end -->
     <div class="bottom__end">
         <div class="vanh__bottom-them">
             <div class="vanh__bottom-them-product-one">
@@ -399,20 +491,34 @@ h3{
         </div>
     </div>
 
-  
 </body>
+<script >
+var orderDate = new Date(); // Lấy thời gian hiện tại
+var day = orderDate.getDate();
+var month = orderDate.getMonth() + 1; // Month trong JavaScript bắt đầu từ 0, nên cần cộng thêm 1
+var year = orderDate.getFullYear();
+var hour = orderDate.getHours();
+var minute = orderDate.getMinutes();
+var second = orderDate.getSeconds();
+
+document.getElementById("orderDate").innerHTML = hour + ":" + minute + ":" + second + " " + day + "/" + month + "/" + year; // In ngày tháng giờ phút giây lên hóa đơn
+
+var customerName = "Nguyen Nam";
+var phoneNumber = "0123456789";
+var addressLine1 = "8A Ton That Tuyet";
+var addressLine2 = "My Dinh";
+var city = " Ha Noi City";
+var state = "";
+var zipcode = "70000";
+var country = "VIET NAM";
+
+var fullAddress = addressLine1 + ", " + addressLine2 + ", " + city + ", " + state + " " + zipcode + ", " + country;
+
+document.getElementById("customerName").innerHTML = customerName; // In tên khách hàng lên hóa đơn
+document.getElementById("phoneNumber").innerHTML = phoneNumber; // In số điện thoại lên hóa đơn
+document.getElementById("address").innerHTML = fullAddress; // In địa chỉ lên hóa đơn
+
+</script>
 
 
-<!-- phan hien thi trang khac -->
-<script>
-    const params = new URLSearchParams(window.location.search);
-    
-    document.getElementById('name').textContent = params.get('name');
-    document.getElementById('addressNumber').textContent = params.get('addressNumber');
-    document.getElementById('address').textContent = params.get('address');
-    document.getElementById('email').textContent = params.get('email');
-    document.getElementById('phone').textContent = params.get('phone');
-    document.getElementById('country').textContent = params.get('country');
-    document.getElementById('postalCode').textContent = params.get('postalCode');
-  </script>
 </html>
