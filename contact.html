@@ -1,0 +1,1056 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" 
+    integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./adidas.css">
+    <title>G1-WILSON-SPORTING-GOODS</title>
+</head>
+<style>
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+.app {
+    max-width: 100%;
+    border: 1px solid #ececec;
+    box-shadow: 1px 1px 1px rgb(240, 237, 237);
+    width: 100%;
+    height: 170px;
+    font-family: sans-serif;
+}
+
+.container {
+    display: flex;
+    padding: 35px 90px;
+
+}
+
+.container__top {
+    padding-left: 80px;
+    width: 300px;
+    height: 100px;
+    color: rgb(73, 73, 252);
+    margin-right: 50px;
+    position: relative;
+    bottom: 20px;
+}
+
+.icon__search {
+    color: #5b5b5b;
+    font-size: 25px;
+    position: relative;
+    left: 50px;
+    top: 12px;
+}
+
+.container__search{
+    width: 570px;
+    height: 45px;
+    border: 2px solid #5b5b5b;
+    border-radius: 50px;
+    padding: 0 50px;
+    font-size: 16px;
+    /* margin-left: 10px; */
+}
+
+.container__all {
+    display: flex;
+    margin: 10px 0;
+}
+
+.container__login {
+    display: flex;
+    text-decoration: none;
+    color: #3a3939;
+    font-size: 25px;
+    border: 1px solid white;
+    background-color: white;
+    /* margin: 0 10px 0 30px; */
+    margin-right: 10px;
+}
+
+.container__login:hover {
+    color: blue;
+}
+
+.login__icon {
+    font-size: 20px;
+    margin: 3px 30px 0 0;
+}
+
+
+.header__cart {
+    position: relative;
+}
+
+.icon__cart {
+    color: #3a3939;
+    font-size: 40px;
+    margin:4px 30px;
+    color: rgb(73, 73, 252);
+    position: relative;
+}
+
+.icon__google {
+    width: 30px;
+    margin: 6px 10px 0 0;
+    border: 1px solid white;
+    border-radius: 4px;
+    position: relative;
+    right: 18px;
+}
+
+.button__google-logo {
+    position: relative;
+    bottom: 10px;
+    right: 10px;
+    color: white;
+}
+/* No Cart */
+
+.header__cart-list {
+    display: none;
+    border: 1px solid rgb(193, 193, 193);
+    border-radius: 5px;
+    position: absolute;
+    z-index: 1;
+    right: 20px;
+    background-color: white;
+    box-shadow: 0 2px 10px #ccc;
+    animation: growth linear 0.3s;
+    --growth-from:0.7;
+    --growth-to:1;
+}
+
+.header__cart-no-cart-img {
+    width: 400px;
+    height: 300px;
+    border-radius: 5px;
+}
+
+.header__cart-list-no-cart-msg {
+    display: block;
+    font-size: 25px;
+    text-align: center;
+    padding: 30px 0;
+    font-weight: 600;
+    color: #5b5b5b;
+}
+
+
+
+.app__hearder {
+    position: fixed;
+    border: 1px solid #ececec ;
+    /* width: 100%; */
+    height: 600px;
+    /* background-image: url('./background.jpg'); */
+    background-image: url('https://cdn.tgdd.vn/hoi-dap/924825/internet-of-things-la-gi-8-800x482.jpg');
+    background-size:cover;
+    position: relative;
+    max-width: 100%;
+}  
+
+
+.app__importer {
+    text-align: center;
+    display: flex;
+    margin: 0 20%;
+    z-index: 1;
+    position: relative;
+    bottom: 50px;
+    
+}
+
+.imformation {
+    text-decoration: none;
+    color: #121112;
+    font-size: 18px;
+    margin: 0 40px;
+    position: relative;
+}
+
+.imformation:hover {
+    color: rgb(73, 73, 252);
+}
+
+
+/* Font Đăng ký, đăng nhập */
+
+
+
+.exit {
+    width: 20px;
+    font-size: 25px;
+    border: 1px solid white;
+    background-color: white;
+    position: relative;
+    left: 300px;
+    bottom: 50px;
+    cursor: pointer;
+}
+
+.icon__user {
+    font-size: 40px;
+    margin: 0 10px 0 20px;
+    color: #666;
+    max-width: 100%;
+    position: relative;
+    bottom: 8px;
+}
+
+
+
+/* Font Đăng nhập  */
+
+.font__sign--in {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.font__sign--in.open {
+    display: flex;
+}
+  
+.modal {
+    background-color: white;
+    margin: auto;
+    position: relative;
+    border-radius: 5px;
+    z-index: 1;
+}
+
+.modal {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 400px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 50px;
+    width: 500px;
+    border-radius: 5px;
+    animation: growth linear 0.3s;
+    --growth-from:0.7;
+    --growth-:1;
+}
+
+.title {
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+}
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+.modal div input{
+    width: 100%;
+    height: 40px;
+    border-radius: 8px;
+    border: 2px solid #c4c4c4;
+    padding: 0 30px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+
+}
+.modal div{
+    position: relative;
+    margin-bottom: 15px;
+}
+input:focus{
+    border: 2px solid rgb(73, 73, 252);
+}
+
+/* Style for icons */
+.modal div i{
+    position: absolute;
+    padding: 10px;
+}
+.failure-icon,
+.error{
+  color: red;
+}
+
+.success-icon{
+  color: green;
+}
+.error{
+  font-size: 14.5px;
+  margin-top: 5px;
+}
+.success-icon,
+.failure-icon{
+  right: 0;
+  opacity: 0;
+}
+.submit__bottom:hover{
+  opacity: 0.8;
+}
+
+.submit__heading {
+    border: 1px solid rgb(73, 73, 252);
+    padding: 10px 115px;
+    position: relative;
+    top: 10px;
+    text-decoration: none;
+    color: white;
+    text-align: center;
+    font-size: 20px;
+    border-radius: 8px;
+}
+
+.button__signin {
+    margin-bottom:10px ;
+}
+
+.submit__bottom {
+    width: 100%;
+    border-radius: 8px;
+    color: #fff;
+    font-size: 20px;
+    background-color: rgb(73, 73, 252);
+    height: 45px;
+    margin-top: 15px;
+    cursor: pointer;
+    box-shadow:2px 2px 4px rgba(0, 0, 0, 0.1);
+    border: 2px solid rgb(73, 73, 252);
+    transition: all 0.1s ease ;
+}
+
+.border__or-all {
+    display: flex;
+    margin: 20px 14px 15px 14px;
+    line-height: 0;
+}
+
+.border__or {
+    border: 1px solid #dedede;
+    background-color: #c1bdbd;
+    border-radius: 3px;
+    height: 1px;
+    width: 100%;
+}
+
+.write_center {
+    margin: 0 10px;
+    color: #c1bdbd;
+}
+
+.button__facebook-items {
+    text-decoration: none;
+
+}
+
+.button__facebook {
+    height: 45px;
+    border: 1px solid rgb(70, 70, 211);
+    border-radius: 8px;
+    background-color: rgb(73, 73, 227);
+    text-align: center;
+    margin: 10px 0;
+}
+
+.button__facebook:hover {
+    background-color: rgb(51, 51, 208);
+}
+
+.icon__facebook {
+    font-size: 30px;
+    color: white;
+    padding: 6px;
+}
+
+.button__facebook-logo {
+    font-size: 16px;
+    font-weight: 600;
+    color: white;
+    padding-bottom: 10px;
+    margin: 0 10px;
+    
+}
+
+.khung-item{
+    font-size: 18px;
+    color: #111;
+    padding: 10px 40px;
+    text-transform: uppercase;
+    border: 1px solid #bebebe;
+    display: inline-block;
+    color: #666;
+    font-weight: 600;
+    border-radius: 4px;
+   margin: 50px 45%;
+}
+
+/* phan cuoi end */
+
+.vanh__bottom-them {
+    display: flex;
+    max-width: 100%;
+    padding: 50px;
+    background-color: #ededed;
+}
+
+.vanh__bottom-them-product {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.vanh__bottom-them-product-one {
+    margin-left: 10%;
+}
+
+
+.vanh__bottom-them-product-one ul{
+    text-align: left;
+    margin-top: 10px;
+    list-style-type: none;
+    font-size: 16px;
+    line-height: 2;
+    cursor: pointer;
+}
+
+.vanh__bottom-them-product-one ul a {
+    text-decoration: none;
+    color: black;
+}
+
+.vanh__bottom-them-product-one ul a:hover {
+    color: #666;
+}
+
+.vanh__bottom-them-product-one ul li:hover {
+    color: #666;
+}
+
+.vanh-icon {
+    display: flex;
+    max-width: 100%;
+    margin-left: 140px;
+}
+
+.vanh-icon img {
+    margin: 20px 10px 0 10px;
+    font-size: 40px;
+}
+
+.vanh-icon-three  {
+    position: relative;
+    bottom: 3px;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.vanh-icon-five {
+    position: relative;
+    bottom: 4px;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+
+.vanh_bottom-end {
+    border: 1px solid black;
+    width: 100%;
+    max-width: 100%;
+    color: white;
+    background-color: #3a3b3d;
+}
+.bottom__end {
+    text-align: center;
+    max-width: 100%;
+    background-color: #f5f5f5;
+    color: white;
+    margin: 30px 0 0 0;
+}
+
+.vanh__bottom-them-product {
+    color: black;
+}
+
+
+.vanh__bottom-them-product-one ul li {
+    color: black;
+}
+
+.bottom__end--address {
+    padding:0 60px 50px 60px;
+    color: white;
+    line-height: 1.5;
+}
+
+.vanh__bottom-them-product {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.bottom__end-items {
+    display: flex;
+    margin-left: 22%;
+}
+
+
+.bottom__end-items--notification {
+    text-decoration: none;
+    max-width: 100%;
+    margin: 40px 0;
+    color: white;
+}
+
+.bottom__end-items--border {
+    border:1px solid #d5d4d4;
+    background-color: #cdcaca;
+    margin: 40px;
+    height: 20px;
+}
+
+.bottom__end--logo {
+    text-align: center;
+}
+
+.bottom__end--logo-hearder {
+   margin: 0 60px;
+}
+
+.bottom__end--logo-hearder-img {
+    width: 200px;
+    border-radius: 4px;
+}
+
+.bottom__end--logo-hearder-img:hover {
+    border: 1px solid #ededed;
+    box-shadow: 1px 1px 1px 2px rgb(133, 232, 245);
+}
+
+.bottom__end--logo-hearder-group1 {
+    width: 200px;
+    /* margin: 10px 0; */
+    border-radius: 4px;
+    height: 75px;
+}
+
+.bottom__end--logo-items {
+    margin: 20px 0 40px 0;
+}
+
+
+
+
+
+/* map */
+
+.googlemap {
+    border: 1px solid white;
+    border-radius: 4px;
+    padding: 30px 100px 40px 100px;
+    display: flex;
+}
+
+
+.googlemap__address {
+    padding-left: 80px;
+    padding-top: 10px;
+}
+
+.googlemap__address-one {
+    margin-bottom: 40px;
+}
+
+.googlemap__address-one span {
+    line-height: 2;
+}
+.googlemap__address-information {
+    font-size: 18px;
+    color: #333;
+    font-weight: 600;
+    margin-left: 15px;
+}
+
+.googlemap__address-items {
+    font-size: 17px;
+    color: rgb(57, 57, 246);
+    cursor: pointer;
+}
+
+.icon__address {
+    font-size: 18px;
+    margin-right: 10px;
+    color: #333;
+}
+
+
+.googlemap__address-email {
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.googlemap__address-number {
+    font-size: 17px;
+    cursor: pointer;
+}
+
+
+/* feedback */
+
+.feedback-contact {
+    padding: 0 100px;
+    max-width: 100%;
+    display: flex;
+}
+
+.feedback-information label {
+    font-size: 18px;
+    color: #111;
+    margin-left: 10px;
+    max-width: 100%;
+}
+
+.feedback-information input {
+    width: 850px;
+    height: 50px;
+    margin-bottom: 30px;
+    border: 1px solid #666;
+    border-radius: 3px;
+    max-width: 100%;
+    padding: 0 20px;
+}
+
+.feedback-information textarea {
+    width: 850px;
+    height: 150px;
+    max-width: 100%;
+    border: 1px solid #666;
+    border-radius: 3px;    
+    padding: 10px 20px;
+}
+
+.feedback-information button {
+    width: 300px;
+    height: 50px;
+    border: 1px solid rgb(72, 72, 223);
+    border-radius: 3px; 
+    color: white;
+    font-size: 18px;
+    font-weight: 600; 
+    background-color: rgb(38, 38, 227); 
+    margin: 40px 0 40px 32%;
+}
+
+.feedback-information button:hover {
+    color: white;
+    background-color: rgb(43, 43, 181);
+}
+
+.result {
+    padding: 40px 60px;
+}
+
+
+
+p {
+    font-size: 18px;
+    margin: 30px 0;
+}
+hr {
+    margin-left: 50px;
+    padding: 50px 0;
+    margin-bottom: 50px;
+}
+h6 {
+    margin-left: 130px;
+    font-size: 24px;
+}
+</style>
+
+
+
+
+<body>
+    <div class="app">
+        <div class="container">
+            <img class="container__top" src="./logoanh.jpg" alt="">
+            <!-- <span class="container__top">G1-SPORT</span> -->
+            <i class="fa-solid fa-magnifying-glass icon__search"></i>
+            <input class="container__search" type="text" id="searchInput" placeholder="Search a products..."> 
+            <button class="button-search" onclick="searchProducts()">Search</button>
+            <div class="container__all">
+                <button class="container__login js-buy-ticket-one" >SIGN IN</button>
+                <i class="fa-solid fa-right-to-bracket login__icon"></i>
+            </div>
+            <div class="header__cart">
+                <a href="http://127.0.0.1:5501/cart.html"> <i class="fa-brands fa-opencart icon__cart"></i></a> 
+
+            </div>
+        </div>
+        <div class="app__importer">
+            <a class="imformation" href="http://127.0.0.1:5501/home.html">HOME</a>
+            <a class="imformation" href="http://127.0.0.1:5501/clother.html">CLOTHER</a>
+            <a class="imformation" href="http://127.0.0.1:5501/shoe2.html">SHOE</a>
+            <a class="imformation" href="http://127.0.0.1:5501/accessory.html">ACCESSORY</a>
+            <a class="imformation" href="http://127.0.0.1:5501/bag.html">BAG</a>
+            <a class="imformation" href="http://127.0.0.1:5501/contact.html">CONTACT</a>
+        </div>
+    </div>
+    <div class="app__hearder">
+    </div>
+
+
+    <h3 class="khung-item">CONTACT</h3>
+
+    <!-- contact -->
+<div class="googlemap">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.097074056705!2d105.7801005147315!3d21.028801485998333!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x313454b32b842a37%3A0xe91a56573e7f9a11!2zOGEgVMO0biBUaOG6pXQgVGh1eeG6v3QsIE3hu7kgxJDDrG5oLCBD4bqndSBHaeG6pXksIEjDoCBO4buZaSAxMDAwMDAsIFZpZXRuYW0!5e0!3m2!1sen!2s!4v1678208670926!5m2!1sen!2s" width="850" height="510" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+    <div class="googlemap__address">
+        <!-- address one -->
+        <div class="googlemap__address-one">
+            <span class="googlemap__address-information">
+                WILLSON SPORTING CENTER
+            </span><br>
+            <span class="googlemap__address-items">
+                <i class="fa-solid fa-map-pin icon__address"></i>
+               8A, TON THAT THUYET, NAM TU LIEM, HA NOI.
+            </span><br>
+            <span class="googlemap__address-number">
+                <i class="fa-solid fa-phone icon__address"></i>
+                0123-456-789
+            </span><br>
+            <span class="googlemap__address-email">
+                <i class="fa-solid fa-envelope icon__address"></i>
+                info@my-group1.com
+            </span>
+        </div>
+
+        <!-- address two -->
+        <div class="googlemap__address-one">
+            <span class="googlemap__address-information">
+                WILLSON SPORTING 2
+            </span><br>
+            <span class="googlemap__address-items">
+                <i class="fa-solid fa-map-pin icon__address"></i>
+              235, YEN HOA, CAU GIAY, HA NOI.
+            </span><br>
+            <span class="googlemap__address-number">
+                <i class="fa-solid fa-phone icon__address"></i>
+                0123-456-789
+            </span><br>
+            <span class="googlemap__address-email">
+                <i class="fa-solid fa-envelope icon__address"></i>
+                info@my-group1.com
+            </span>
+        </div>
+
+        <!-- address three -->
+        <div class="googlemap__address-one">
+            <span class="googlemap__address-information">
+                WILLSON SPORTING 3
+            </span><br>
+            <span class="googlemap__address-items">
+                <i class="fa-solid fa-map-pin icon__address"></i>
+               160A, KHAM THIEM, BA DINH, HA NOI.
+            </span><br>
+            <span class="googlemap__address-number">
+                <i class="fa-solid fa-phone icon__address"></i>
+                0123-456-789
+            </span><br>
+            <span class="googlemap__address-email">
+                <i class="fa-solid fa-envelope icon__address"></i>
+                info@my-group1.com
+            </span>
+        </div>
+
+    </div>
+</div>
+
+
+  <!-- feedback -->
+  <div class="feedback-contact">
+    <div class="feedback-information">
+      <label for="name">Full Name:</label>
+      <input type="text" id="name" name="name" placeholder="Your name..."><br><br>
+  
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" placeholder="Your email..."><br><br>
+  
+      <label for="phone">Phone Number:</label>
+      <input type="tel" id="phone" name="phone" placeholder="Your phone number..."><br><br>
+  
+      <label for="feedback">Subject:</label>
+      <textarea id="feedback" name="feedback" placeholder="Write something..."></textarea><br><br>
+  
+      <button type="button" onclick="submitForm()">Submit</button>
+    </div>
+  <hr>
+    <div class="result" id="result">
+       
+    </div>
+  </div>
+
+    <!-- end-contacts -->
+                
+                                                <!-- đăng nhập -->
+<div class="font__sign--in">
+    <form class="modal" action="" id="form">
+        <div class="close">
+            <button class="exit">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+        </div>
+        <div class="title">SIGN IN</div>
+        <!-- User Name input -->
+        <div>
+            <label for="username">User Name</label>
+            <i class="fas fa-user"></i>
+            <input type="text" name="username" id="username" placeholder="James bond">
+            <i class="fas fa-exclamation-circle failure-icon"></i>
+            <i class="fas fa-check-circle success-icon"></i>
+            <div class="error"></div>
+        </div>
+        <!-- Email input -->
+        <div>
+            <label for="email">Email</label>
+            <i class="fas fa-envelope"></i>
+            <input type="email" name="email" id="email" placeholder="bond@gmail.com">
+            <i class="fas fa-exclamation-circle failure-icon"></i>
+            <i class="fas fa-check-circle success-icon"></i>
+            <div class="error"></div>
+        </div>
+        <!-- Password input -->
+        <div>
+            <label for="password">Password</label>
+            <i class="fas fa-lock"></i>
+            <input type="password" name="password" id="password" placeholder="Password here"  >
+            <i class="fas fa-exclamation-circle failure-icon"></i>
+            <i class="fas fa-check-circle success-icon"></i>
+            <div class="error"></div>
+        </div>
+
+
+        <!-- quan trong -->
+        <div class="submit__bottom">
+          <button id="submit" class="vanh-submit">Submit</button>
+        </div>
+       
+    
+        <div class="border__or-all">
+        <div class="border__or"></div>
+        <span class="write_center">OR</span>
+        <div class="border__or"></div>
+    </div>
+    <!-- facebook -->
+    <a class="button__facebook-items" href="https://vi-vn.facebook.com/">
+        <h3 class="button__facebook">
+            <i class="fa-brands fa-square-facebook icon__facebook"></i>
+            <span class="button__facebook-logo">FACEBOOK</span>
+        </h3>
+    </a>
+   <!-- google -->
+    <a class="button__facebook-items" href="https://accounts.google.com/v3/signin/identifier?dsh=S-636911065%3A1676126060267059&continue=https%3A%2F%2Fwww.google.com.vn%2F%3Fhl%3Dvi&ec=GAZAmgQ&hl=vi&passive=true&flowName=GlifWebSignIn&flowEntry=ServiceLogin&ifkv=AWnogHeIS_CQ3C0odY0fjnmmTDfJpIj5FTNdOvZxSI5FtkxxYbAwAvouRyVuqJauH0W5M8Lu5tRJdA">
+        <h3 class="button__facebook">
+           <img class="icon__google" src="data:image/png;base64,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" alt="">
+            <span class="button__google-logo">GOOGLE</span>
+        </h3>
+    </a>
+    </form>
+    </div>
+
+    
+
+    <!-- phan cuoi end -->
+
+    <div class="bottom__end">
+        <div class="vanh__bottom-them">
+            <div class="vanh__bottom-them-product-one">
+                    <span class="vanh__bottom-them-product">
+                        PRODUCTS
+                    </span>
+                        <ul>
+                            <li><a href="http://127.0.0.1:5501/shoe2.html">- Shoes Men</a></li>
+                            <li><a href="http://127.0.0.1:5501/bag.html">- Bag Adidas</a></li>
+                            <li><a href="http://127.0.0.1:5501/clother.html">- Clothes Men fashion</a></li>
+                            <li><a href="http://127.0.0.1:5501/shoe2.html">- Cap/Hat Adidas</a></li>
+                            <li><a href="http://127.0.0.1:5501/accessory.html">- Accessory Sports</a></li>
+                            <li>- Products New</li>
+                            <li>- Products Hot</li>
+                            <li>- All Products</li>
+                        </ul>
+            </div>
+
+            <div class="vanh__bottom-them-product-one">
+                <span class="vanh__bottom-them-product">
+                    FOLLOW US
+                </span>
+                  <ul class="vanh-icon">
+                    <li><img class="vanh-icon-one" src="https://dongphucphuongthao.vn/wp-content/uploads/2022/06/fb.png"></li>
+                    <li><img class="vanh-icon-two" src="https://dongphucphuongthao.vn/wp-content/uploads/2022/06/g.png"></li>
+                    <li><img class="vanh-icon-three" src="https://dongphucphuongthao.vn/wp-content/uploads/2022/06/insta.png" ></li>
+                    <li><img class="vanh-icon-four" src="https://dongphucphuongthao.vn/wp-content/uploads/2022/06/yt.png"></li>
+                    <li><img class="vanh-icon-five" src="https://dongphucphuongthao.vn/wp-content/uploads/2022/06/p.png"></li>
+                    <li><img class="vanh-icon-six" src="https://dongphucphuongthao.vn/wp-content/uploads/2022/06/tiktok.png"></li>
+                  </ul>  <br><br>
+                  <div class="bottom__end--logo">
+                    <a href="" class="bottom__end--logo-hearder">
+                        <img class="bottom__end--logo-hearder-img" src="https://s3.amazonaws.com/cdn.freshdesk.com/data/helpdesk/attachments/production/42008041469/original/Mo9gDy2XMZLppkUw4sWCsYV-lk65HqqgQw.gif?1539077990" alt="">
+                    </a>
+                    <img class="bottom__end--logo-hearder-group1" src="./logoanh.jpg" alt="">
+                </div>
+            </div>
+
+            <div class="vanh__bottom-them-product-one">
+                <span class="vanh__bottom-them-product">
+                    SUPPORT
+                </span>
+                    <ul>
+                        <li>- Customer Service Help</li>                
+                        <li>- Store search engine</li>
+                        <li>- Size Chart</li>
+                        <li>- Pay</li>
+                        <li>- Delivery</li>
+                        <li>- Returns & Refunds</li>
+                        <li>- Promotion</li>
+                        <li>- Sitemap</li>
+                    </ul>
+            </div>
+
+            
+        </div>
+
+
+        <div class="vanh_bottom-end">
+            <div class="bottom__end-items">
+               <a class="bottom__end-items--notification" href="">PRIVACY POLICY</a>
+               <div class="bottom__end-items--border"></div>
+               <a class="bottom__end-items--notification" href="">OPERATION REGULATIONS</a>
+               <div class="bottom__end-items--border"></div>
+               <a class="bottom__end-items--notification" href="">SHIPPING POLICY</a>
+               <div class="bottom__end-items--border"></div>
+               <a class="bottom__end-items--notification" href="">REFUND AND REFUND POLICY</a>
+            </div>
+            
+            <div class="bottom__end--address">
+                Address: No. 8A, Ton That Thuyet Street, My Dinh 2 Ward, Cau Giay District, Hanoi City, Vietnam. Support call center: 19001221 - Email: group1sport@gmail.com
+                Responsible for Content Management: Group1 Sport - Contact phone: 024 6783210 (ext 4678)
+                Enterprise code: 0106773786 first issued by Hanoi Department of Planning and Investment on October 20, 2015
+                © 2015 - Copyright belongs to G1 Sport Co., Ltd.
+            </div>
+
+        </div>
+    </div>
+
+
+                                        
+
+                                            
+</body>
+
+
+    <script>
+        // javascript Sign in
+        const buySigns = document.querySelectorAll('.js-buy-ticket-one')
+        const signin = document.querySelector('.font__sign--in')
+        const modalClose = document.querySelector('.close')
+
+
+        function fllowingBuyTickets() {
+            signin.classList.add('open')
+        }
+
+        function exitBuyTickets() {
+            signin.classList.remove('open')
+        }
+
+        for(const buySign of buySigns) {
+            buySign.addEventListener('click', fllowingBuyTickets)
+        } 
+        
+        modalClose.addEventListener('click', exitBuyTickets)
+    </script>
+
+<!-- check sign in  -->
+  <script>
+    let id = (id) => document.getElementById(id);
+let classes =(classes) =>document.getElementsByClassName(classes);
+
+let username = id("username"),
+    password = id("password"),
+    email = id("email"),
+    errorMsg = classes("error"),
+    successIcon=classes("success-icon"),
+    failureIcon = classes("failure-icon");
+form.addEventListener("submit",(e) =>{
+    e.preventDefault(); //callback() trong js
+    engine(username,0,"Username cannot be blank!");
+    engine(email,1,"Email cannot be blank!");
+    engine(password,2,"Password cannot be blank!");
+});
+
+let engine = (id,serial,message) =>{
+    if(id.value.trim()===""){
+        errorMsg[serial].innerHTML = message;
+        id.style.border ="2px solid red";
+        failureIcon[serial].style.opacity="1";
+        successIcon[serial].style.opacity="0";
+    }else{
+        errorMsg[serial].innerHTML = "";
+        id.style.border ="2px solid green";
+        failureIcon[serial].style.opacity="0";
+        successIcon[serial].style.opacity="1";
+    }
+};
+  </script>
+    
+<!-- js feedback -->
+<script>
+    function submitForm() {
+      var name = document.getElementById("name").value;
+      var email = document.getElementById("email").value;
+      var phone = document.getElementById("phone").value;
+      var feedback = document.getElementById("feedback").value;
+      var errorMessage = "";
+    
+      if (name == "") {
+        errorMessage += "Name is required.<br>";
+      }
+    
+      if (email == "") {
+        errorMessage += "Email is required.<br>";
+      }
+    
+      if (phone == "") {
+        errorMessage += "Phone is required.<br>";
+      }
+    
+      if (feedback == "") {
+        errorMessage += "Feedback is required.<br>";
+      }
+    
+      if (errorMessage != "") {
+        document.getElementById("result").innerHTML = "<p style='color:red;margin:30px 0'>" + errorMessage + "</p>";
+      } else {
+        document.getElementById("result").innerHTML ="<h6>Feed Back</h6>" + "<p><strong>Full Name:</strong> " + name + "</p><p><strong>Email:</strong> " + email + "</p><p><strong>Phone Number:</strong> " + phone + "</p><p><strong>Subject:</strong> " + feedback + "</p>";
+      }
+    }
+    </script>
+
+</html>
+
+
+
+
