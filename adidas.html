@@ -632,14 +632,14 @@
         </div>
         <div class="title">SIGN IN</div>
         <!-- User Name input -->
-        <div>
+        <!-- <div>
             <label for="username">User Name</label>
             <i class="fas fa-user"></i>
             <input type="text" name="username" id="username" placeholder="James bond">
             <i class="fas fa-exclamation-circle failure-icon"></i>
             <i class="fas fa-check-circle success-icon"></i>
             <div class="error"></div>
-        </div>
+        </div> -->
         <!-- Email input -->
         <div>
             <label for="email">Email</label>
@@ -805,7 +805,7 @@
     let id = (id) => document.getElementById(id);
 let classes =(classes) =>document.getElementsByClassName(classes);
 
-let username = id("username"),
+let
     password = id("password"),
     email = id("email"),
     errorMsg = classes("error"),
@@ -813,9 +813,8 @@ let username = id("username"),
     failureIcon = classes("failure-icon");
 form.addEventListener("submit",(e) =>{
     e.preventDefault(); //callback() trong js
-    engine(username,0,"Username cannot be blank!");
-    engine(email,1,"Email cannot be blank!");
-    engine(password,2,"Password cannot be blank!");
+    engine(email,0,"Email cannot be blank!");
+    engine(password,1,"Password cannot be blank!");
 });
 
 let engine = (id,serial,message) =>{
