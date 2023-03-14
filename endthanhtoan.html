@@ -31,10 +31,7 @@
 				var cardExpiration = document.getElementById('card-expiration').value;
 
 				// Kiểm tra xem khách hàng đã nhập đầy đủ thông tin thẻ hay chưa
-				if (cardName == "" || cardNumber == "" || cardExpiration == "") {
-					alert("Please enter full credit card information.");
-					return false;
-				}
+				
 			}
 
 			// Nếu thông tin hợp lệ, chuyển đến trang xác nhận đơn hàng
@@ -117,13 +114,14 @@
 	.payment--card-heading input {
 		height: 20px;
 		width: 30px;
+		margin-bottom: 5px;
 	}
 
 	.payment--card-heading label {
 		font-weight: 600;
 		position: relative;
 		bottom: 5px;
-		margin: 0 200px 90px 10px;
+		margin: 0 150px 90px 10px;
 		margin-bottom: 50px;
 	}
 
@@ -348,6 +346,12 @@
 .vanh_thanhtoan--picture {
 	text-align: center;
 }
+
+.error {
+  color: red;
+  display: none;
+  margin: 10px 20px;
+}
 </style>
 <body>
 	<div class="container">
@@ -377,18 +381,21 @@
 			<img src="https://www.adidas.com.vn/static/checkout/react/53b3ef3/assets/img/icon-adidas-visa.svg" alt="">
 			<img src="https://www.adidas.com.vn/static/checkout/react/53b3ef3/assets/img/icon-adidas-master-card.svg" alt="">
 			<div id="credit-card-info" style="display: none;" class="credit-card-info"><br><br>
-			  <label class="card-name" for="card-name">Card Name:</label><br>
-			  <input type="text" id="card-name"><br><br>
+			  <label class="name" for="name">Card Name:</label><br>
+			  <input type="text" id="card-name"><br>
+              <span id="nameError" class="error"></span><br><br>
 			  <label class="card-number" for="card-number">Card Number:</label><br>
-			  <input type="number" id="card-number"><br><br>
+			  <input type="text" id="card-number"><br>
+              <span id="cardNumberError" class="error"></span><br><br>
 			  <label class="card-expiration" for="card-expiration">Card Making Date:</label><br>
-			  <input type="number" id="card-expiration">
+			  <input type="text" id="card-expiration"><br>
+              <span id="expiryDateError" class="error"></span>
 			</div>
 		  </div>
 		</div>
 	
 	
-			<p class="order--button"><input type="submit" value="ORDER"><i class="fa-solid fa-arrow-right"></i></p>
+			<p class="order--button" id="submitBtn"><input type="submit" value="ORDER" id="submitBtn"><i class="fa-solid fa-arrow-right"></i></p>
 		</form>
 
 
@@ -522,4 +529,53 @@
     document.getElementById('country').textContent = params.get('country');
     document.getElementById('postalCode').textContent = params.get('postalCode');
   </script>
+
+  <!-- js -->
+
+  <script>
+	const nameInput = document.getElementById("card-name");
+const cardNumberInput = document.getElementById("card-number");
+const expiryDateInput = document.getElementById("card-expiration");
+const nameError = document.getElementById("nameError");
+const cardNumberError = document.getElementById("cardNumberError");
+const expiryDateError = document.getElementById("expiryDateError");
+const submitBtn = document.getElementById("submitBtn");
+
+submitBtn.addEventListener("click", function() {
+  let isValid = true;
+  
+  // Check if name is empty
+  if (nameInput.value.trim() === "") {
+    nameError.innerHTML = "Please enter your name...";
+    nameError.style.display = "inline";
+    isValid = false;
+  } else {
+    nameError.style.display = "none";
+  }
+  
+  // Check if card number is empty
+  if (cardNumberInput.value.trim() === "") {
+    cardNumberError.innerHTML = "Please enter your card number...";
+    cardNumberError.style.display = "inline";
+    isValid = false;
+  } else {
+    cardNumberError.style.display = "none";
+  }
+  
+  // Check if expiry date is empty
+  if (expiryDateInput.value.trim() === "") {
+    expiryDateError.innerHTML = "Please enter your expiry date...";
+    expiryDateError.style.display = "inline";
+    isValid = false;
+  } else {
+    expiryDateError.style.display = "none";
+  }
+  
+  // Redirect to another page if input is valid
+  if (isValid) {
+    window.location.href = "trangthank.html";
+  }
+});
+
+</script>
 </html>
